@@ -3,6 +3,7 @@ const aoijs = require('aoi.js');
 const aoimongo = require('aoi.mongo');
 const config = require('./config.js');
 const bot = new aoijs.Bot(config.Bot);
+const keepAlive = require('./server.js');
 
 //Handlers
 require('./handlers/status')(bot);
@@ -47,10 +48,14 @@ loader.setColors({
 });
 
 bot.command({
-    name: "c-eval",
-    code: `
-	$createApplicationCommand[$guildID;eval;Only for Neo :3;true;slash;code:etto...:true:3]
-	Done daddy :d
-	$onlyForIDs[$botOwnerID;]
-	`
+  name: "c-eval",
+  code: `
+  $createApplicationCommand[$guildID;eval;Only for Neo :3;true;slash;code:etto...:true:3]
+
+  Done daddy :d
+
+  $onlyForIDs[$botOwnerID;]
+  `
 });
+
+keepAlive()
