@@ -27,9 +27,9 @@ module.exports = [
       }]
     
       const senddata  = await d.util.errorParser("{newEmbed:{title:Pick a song via menu}{description:$customEmoji[kaeruActions] Pick a track to play ヾ(〃^∇^)ﾉ}{color:$getVar[redHex]}{footer:Enjoy!}}")
-      
+
       senddata.components = components;
-      
+
       d.data.interaction.reply(senddata)
       
     })()]
@@ -37,14 +37,12 @@ module.exports = [
     $let[platform;youtube]
   
     $if[$hasPlayer==false]
+    $joinVC
+    $endif
 
-	  $joinVC
-
-	  $endif
-
-	  $onlyIf[$voiceID[$authorID]!=;{"content": "You are not in voice channel.", "ephemeral": true, "options": { "interaction" : true } }]
+    $onlyIf[$voiceID[$authorID]!=;{"content": "You are not in voice channel.", "ephemeral": true, "options": { "interaction" : true } }]
 	
-	  $onlyIf[$interactionData[options._subcommand]==youtube;]
+    $onlyIf[$interactionData[options._subcommand]==youtube;]
     `
   },
   {
@@ -55,24 +53,26 @@ module.exports = [
     
     $wait[1s]
     
-		$let[e;$playTrack[$get[platform];$interactionData[values[0]]]
+    $let[e;$playTrack[$get[platform];$interactionData[values[0]]]
 		
-		$playerConfig[yes;30s]
+    $playerConfig[yes;30s]
 
-		$interactionDeferUpdate
+    $interactionDeferUpdate
 		
-		$onlyif[$get[author]==$interactionData[author.id]; {
-		  "content": "$nonEscape[$customEmoji[kaeruAlert]] But let them pick, plss :(",
-		  "ephemeral": true,
-		  "options": { "interaction": true }
-		}]
+    $onlyif[$get[author]==$interactionData[author.id]; {
+      "content": "$nonEscape[$customEmoji[kaeruAlert]] But let them pick, plss :(",
+      "ephemeral": true,
+      "options": { 
+        "interaction": true 
+      }
+    }]
 		
-		$onlyif[$get[customId]==searchResult;]
+    $onlyif[$get[customId]==searchResult;]
 
-		$let[platform;$splitText[3]]
-		$let[author;$splittext[2]]
-		$let[customId;$splitText[1]]
-		$TextSplit[$interactionData[customId];_]
+    $let[platform;$splitText[3]]
+    $let[author;$splittext[2]]
+    $let[customId;$splitText[1]]
+    $textSplit[$interactionData[customId];_]
     `
   },
   {
@@ -83,24 +83,22 @@ module.exports = [
     code: `
     $let[e;$playTrack[spotify;$slashOption[𓂃url]]]
     
-		$interactionFollowUp[;{newEmbed:{description:$customEmoji[kaeruActions] Spotify link has been added to queue :3
+    $interactionFollowUp[;{newEmbed:{description:$customEmoji[kaeruActions] Spotify link has been added to queue :3
 > *Please wait a little bit to it fetch ❤️*}{color:$getVar[redHex]}{footer:Enjoy #COLON#3}}]
 
     $playerConfig[yes;30s]
     
-		$interactionDefer
+    $interactionDefer
 	
-		$if[$hasPlayer==false]
+    $if[$hasPlayer==false]
+    $joinVC
+    $endif
 
-		$joinVC
-
-		$endif
-
-		$onlyIf[$checkContains[$slashOption[𓂃url];https://open.spotify.com/track/;https://open.spotify.com/playlist/]==true;{"content": "Please insert a spotify track or playlist url.", "options": { "interaction" : true } }]
+    $onlyIf[$checkContains[$slashOption[𓂃url];https://open.spotify.com/track/;https://open.spotify.com/playlist/]==true;{"content": "Please insert a spotify track or playlist url.", "options": { "interaction" : true } }]
 	
-		$onlyIf[$voiceID[$authorID]!=;{"content": "$nonEscape[$customEmoji[kaeruAlert]] You are not in voice channel or joined to my voice channel :(", "ephemeral": true, "options": { "interaction" : true } }]
+    $onlyIf[$voiceID[$authorID]!=;{"content": "$nonEscape[$customEmoji[kaeruAlert]] You are not in voice channel or joined to my voice channel :(", "ephemeral": true, "options": { "interaction" : true } }]
 
-		$onlyIf[$interactionData[options._subcommand]==spotify;]
-		`
-	}
+    $onlyIf[$interactionData[options._subcommand]==spotify;]
+    `
+  }
 ]
