@@ -4,13 +4,13 @@ module.exports = {
   prototype: 'slash',
   code: `	
   $interactionFollowUp[$slashOption[user];{newEmbed:
-  {author:$userTag[$slashOption[user]] $randomText[got beanned;was puff;be gone thot;disappeared;got punishment;is staying on my blacklist]:$authorAvatar}
-  {thumbnail:$userAvatar[$slashOption[user]]}
-  {description:$customEmoji[kaeruAction] Here's the details for action :3}
-  {field:$customEmoji[kaeruNote] Deleted Messages:**\`$replaceText[$interactionData[options.data[2].value];undefined;Didn't delete any messages :3]\`**}
-  {field:$customEmoji[kaeruPencil] Reason:>>> __$replaceText[$interactionData[options.data[1].value];undefined;No reason given :3]__}
-  {color:$getVar[redHex]}
-  {footer:Banned user's ID on the content message #COLON#3}
+    {author:$userTag[$slashOption[user]] $randomText[got beanned;was puff;be gone thot;disappeared;got punishment;is staying on my blacklist]:$authorAvatar}
+    {thumbnail:$userAvatar[$slashOption[user]]}
+    {description:$customEmoji[kaeruAction] Here's the details for action :3}
+    {field:$customEmoji[kaeruNote] Deleted Messages:**\`$replaceText[$interactionData[options.data[2].value];undefined;Didn't delete any messages :3]\`**}
+    {field:$customEmoji[kaeruPencil] Reason:>>> __$replaceText[$interactionData[options.data[1].value];undefined;No reason given :3]__}
+    {color:$getVar[redHex]}
+    {footer:Banned user's ID on the content message #COLON#3}
   }]
 
   $ban[$slashOption[user];$guildID;$replaceText[$interactionData[options.data[2].value];undefined;0];$replaceText[$interactionData[options.data[1].value];undefined;no reason.]]
