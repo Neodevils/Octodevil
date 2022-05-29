@@ -101,14 +101,14 @@ module.exports = (bot) => {
   bot.variables({
     profileTitle: "",
     profileDescription: "",
-    money: "0"
+    token: "0",
+    cube: "0"
   })
 
 //Others
   bot.variables({
     caseNum: "0",
     keyRole: "805451556081500220",
-    msgWebhook: "8gDapddH2y832Oba8SYM_V9K2lpF5L9LMzPhj4a6ylOYUOvBugbgxnRFFwg91UQi8zb_",
     supportMessage: "e",
     endstamp:"0",
     hoster:"",
