@@ -8,7 +8,8 @@ module.exports = (bot) => {
     redHex: "#FF7A7A",
     orangeHex: "#FFAA7C",
     purpleHex: "#DDB5FF",
-    blueHex: "#D4DEFF"
+    blueHex: "#D4DEFF",
+    gitHex: "#EC775C"
   })
   
 //Staff Roles
@@ -102,7 +103,8 @@ module.exports = (bot) => {
     profileTitle: "",
     profileDescription: "",
     token: "0",
-    cube: "0"
+    cube: "0",
+    dailyMultiplier: "100"
   })
 
 //Others
