@@ -111,7 +111,7 @@ module.exports = (bot) => {
   bot.variables({
     caseNum: "0",
     keyRole: "805451556081500220",
-    supportMessage: "e",
+    randomString: "",
     endstamp:"0",
     hoster:"",
     prize:"",
