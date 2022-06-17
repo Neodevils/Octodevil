@@ -9,7 +9,8 @@ module.exports = (bot) => {
     orangeHex: "#FFAA7C",
     purpleHex: "#DDB5FF",
     blueHex: "#D4DEFF",
-    gitHex: "#EC775C"
+    gitHex: "#EC775C",
+    invisibleHex: "#303136"
   })
   
 //Staff Roles
