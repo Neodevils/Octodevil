@@ -103,9 +103,9 @@ module.exports = (bot) => {
   bot.variables({
     profileTitle: "",
     profileDescription: "",
-    token: "0",
-    cube: "0",
-    dailyMultiplier: "100"
+    token: 0,
+    cube: 0,
+    dailyMultiplier: 1
   })
 
 //Others
