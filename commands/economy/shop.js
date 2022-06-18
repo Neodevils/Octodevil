@@ -9,28 +9,23 @@ module.exports = [
     	{thumbnail:https://media.discordapp.net/attachments/861208192121569280/987711541136736256/1655559171764.png?width=619&height=497}
 			{description:$randomText[What can I get for you, $username?;So close, yet so far. You're right in front of me, but I can't afford to buy you.;No questions. I'll only tell you to buy it all!;The Procurement Department has everything you need. Take your time.;The Procurement Department can get you anything on the shopping list.;That's the best deal we can get, Doctor! Stop asking!;I'll take them if you don't.;Pro Tip: This is all great stuff worth taking home!]]}
 			{color:$getVar[gitHex]}
-			{field:attachment sharing:>>> *send embed links & upload attachments*
-<@&963765637027598357>
-$customEmoji[mnsToken] 2,500}
-			{field:special perk:>>> __change nickname__
-Role ⸼ ۫  ꒰#COLON# <@&$getVar[special]>
-Price ⸼ ۫ ꒰#COLON# $getVar[currency] 10,000}{color: $getroleColor[928642084980793404]}{image:https://media.discordapp.net/attachments/774748031589023764/846326512058892288/Untitled1254_20201118194118.png}}
-
-			{newEmbed:{field:starlight perk:>>> __100 ⧖ income for hourly__
-Role ⸼ ۫  ꒰#COLON# <@&$getVar[starlight]>
-Price ⸼ ۫ ꒰#COLON# $getVar[currency] 15,000}{color: $getroleColor[963765637027598357]}{image:https://media.discordapp.net/attachments/774748031589023764/846326512705732678/Untitled1254_20201118194136.png}}
-
-			{newEmbed:{field:epic perk:>>> __talk with other members in other servers__
-Role ⸼ ۫  ꒰#COLON# <@&$getVar[epic]>
-Price ⸼ ۫ ꒰#COLON# $getVar[currency] 17,500}{color: $getroleColor[928641823033942077]}{image:https://media.discordapp.net/attachments/774748031589023764/846326512567582740/Untitled1254_20201118194128.png}}
-
-			{newEmbed:{field:collector perk:>>> __custom auto response__
-Role ⸼ ۫  ꒰#COLON# <@&$getVar[collector]>
-Price ⸼ ۫ ꒰#COLON# $getVar[currency] 50,000}{color: $getroleColor[895307653851512914]}{image:https://media.discordapp.net/attachments/774748031589023764/846326511404711986/Untitled1254_20201118194059.png}}
-
-			{newEmbed:{field:legend perk:>>> __custom role__
-Role ⸼ ۫  ꒰#COLON# <@&$getVar[legend]>
-Price ⸼ ۫ ꒰#COLON# $getVar[currency] 125,000}{color: $getroleColor[895308742642507817]}{image:https://media.discordapp.net/attachments/774748031589023764/846326511279144970/Untitled1254_20201118194054.png}
+			{field:Sharing:>>> *send embed links & upload attachments*
+				៸៸	<@&963765637027598357>
+				៸៸	$customEmoji[mnsCube] 3 Orindium }
+			{field:ID Update:>>> *this one is for you, $username*
+				៸៸	<@&928642084980793404>
+				៸៸	$customEmoji[mnsCube] 15 Orindium}
+			{field:Certificate:>>> *by-pass automod*
+				៸៸	<@&987700992634138625>
+				៸៸	$customEmoji[mnsCube] 18 Orindium}
+			{field:Growth Pack:>>> *__Content__
+				• 80.000 AKI Tokens*
+				៸៸	<@&895307653851512914>
+				៸៸	$customEmoji[mnsCube] 20 Orindium}
+				895308742642507817
+			{field:Freshman:>>> *Your custom role and will be yours forever.*
+				៸៸	<@&895308742642507817>
+				៸៸	$customEmoji[mnsCube] 30 Orindium}	
 		};{actionRow:
 			{selectMenu:shopMenu:・Please pick a role from the shop.:1:1:false:
 			{selectMenuOptions:・Elite:shop0:external emojis & send embed links:false:<:elite_perk:964164939273101382>}
