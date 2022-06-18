@@ -1,21 +1,18 @@
 module.exports = [
 	{
-		name: "shop",
+		name: "store",
 		type: 'interaction', 
 		prototype: 'slash',
 		code: `
 		$interactionReply[;{newEmbed:
-    	{author: Welcome to role shop!:$userAvatar[$clientID]}
-    	{thumbnail:$serverIcon}
-    	{description:>>> Hello, $username!
- This is **__Permission Shop__**, which you can gain permission with showing us your membership to MinesaHub!
- 
-*P.S: You can buy roles with selecting on menu #SEMI#)*}
-			{newEmbed:{field:elite perk:>>> __external emojis & send embed links__
-Role ⸼ ۫  ꒰#COLON# <@&$getVar[elite]>
-Price ⸼ ۫ ꒰#COLON# $getVar[currency] 2,500}{color: $getroleColor[963676267218108417]}{image:https://media.discordapp.net/attachments/774748031589023764/846326511531065354/Untitled1254_20201118194103.png}}
-    
-			{newEmbed:{field:special perk:>>> __change nickname__
+    	{author: Welcome to Store:$userAvatar[$clientID]}
+    	{thumbnail:https://media.discordapp.net/attachments/861208192121569280/987711541136736256/1655559171764.png?width=619&height=497}
+			{description:$randomText[What can I get for you, $username?;So close, yet so far. You're right in front of me, but I can't afford to buy you.;No questions. I'll only tell you to buy it all!;The Procurement Department has everything you need. Take your time.;The Procurement Department can get you anything on the shopping list.;That's the best deal we can get, Doctor! Stop asking!;I'll take them if you don't.;Pro Tip: This is all great stuff worth taking home!]]}
+			{color:$getVar[gitHex]}
+			{field:attachment sharing:>>> *send embed links & upload attachments*
+<@&963765637027598357>
+$customEmoji[mnsToken] 2,500}
+			{field:special perk:>>> __change nickname__
 Role ⸼ ۫  ꒰#COLON# <@&$getVar[special]>
 Price ⸼ ۫ ꒰#COLON# $getVar[currency] 10,000}{color: $getroleColor[928642084980793404]}{image:https://media.discordapp.net/attachments/774748031589023764/846326512058892288/Untitled1254_20201118194118.png}}
 
