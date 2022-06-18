@@ -8,7 +8,7 @@ module.exports = (bot) => {
     redHex: "#FF7A7A",
     orangeHex: "#FFAA7C",
     purpleHex: "#DDB5FF",
-    blueHex: "#D4DEFF",
+    blueHex: "#79B8FF",
     gitHex: "#EC775C",
     invisibleHex: "#303136"
   })

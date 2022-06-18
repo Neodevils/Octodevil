@@ -4,13 +4,13 @@ module.exports = {
   prototype: 'slash',
   code: `
 	
-	$setGlobalUserVar[dailyMultiplier;$sum[$getGlobalUserVar[dailyMultiplier];1]]
+  $setGlobalUserVar[dailyMultiplier;$sum[$getGlobalUserVar[dailyMultiplier];1]]
 	
   $setGlobalUserVar[token;$math[$getGlobalUserVar[token]+(1000*$getGlobalUserVar[dailyMultiplier])]]
 	
-	$setGlobalUserVar[cube;$sum[$getGlobalUserVar[cube];1]
+  $setGlobalUserVar[cube;$sum[$getGlobalUserVar[cube];1]
 	
-  $interactionEdit[;{newEmbed:{title:$customEmoji[mnsBookmark] Signed-in successfully}{field:꒷꒦ received:➜ $customEmoji[mnsToken] × \`$abbreviate[$multi[1000;$getGlobalUserVar[dailyMultiplier]]]\` AKI Tokens 
+  $interactionEdit[;{newEmbed:{title:$customEmoji[mnsBookmark] Signed-in successfully}{field:꒷꒦ received:➜ $customEmoji[mnsToken] × \`$abbreviate[$multi[1000;$getGlobalUserVar[dailyMultiplier]];1]\` AKI Tokens 
 ➜ $customEmoji[mnsCube] × \`1\` Infected Cube}{color:$getVar[invisibleHex]}{thumbnail:$authorAvatar}{footer:𖥂 You can sign-in next day}}]
   
   $wait[$random[2500;3500]ms]
