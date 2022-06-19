@@ -2,9 +2,9 @@ module.exports = [
 	{
 		name: "store",
 		type: 'interaction', 
-		prototype: 'slash',
+		prototype: 'button',
 		code: `
-		$interactionReply[;{newEmbed:
+		$interactionUpdate[;{newEmbed:
     	{author: Welcome to Store:$userAvatar[$clientID]}
     	{thumbnail:https://media.discordapp.net/attachments/861208192121569280/987711541136736256/1655559171764.png?width=619&height=497}
 			{description:$randomText[What can I get for you, $username?;So close, yet so far. You're right in front of me, but I can't afford to buy you.;No questions. I'll only tell you to buy it all!;The Procurement Department has everything you need. Take your time.;The Procurement Department can get you anything on the shopping list.;That's the best deal we can get, Doctor! Stop asking!;I'll take them if you don't.;Pro Tip: This is all great stuff worth taking home!]]}
@@ -27,14 +27,14 @@ module.exports = [
 				៸៸	<@&895308742642507817>
 				៸៸	$customEmoji[mnsCube] 30 Orindium}	
 		};{actionRow:
-			{selectMenu:shopMenu:・Please pick a role from the shop.:1:1:false:
-			{selectMenuOptions:・Elite:shop0:external emojis & send embed links:false:<:elite_perk:964164939273101382>}
-			{selectMenuOptions:・Special:shop1:change nickname:false:<:special_perk:964165003445944360>}
-			{selectMenuOptions:・Starlight:shop2:100 black holes/h income!:false:<:starlight_perk:964165089710190592>}
-			{selectMenuOptions:・Epic:shop3:talk with other people in the shop servers!:false:<:epic_perk:964165167241900084>}
-			{selectMenuOptions:・Collector:shop4:custom auto response!:false:<:collector_perk:964165266563031120>}
-			{selectMenuOptions:・Legend:shop5:custom role:false:<:legend_perk:964165324205330442>}
-		}}]
+			{selectMenu:shopMenu:・Choose wisely~:1:1:false:
+				{selectMenuOptions:・Attachment:shop0:external emojis & send embed links:false:<:elite_perk:964164939273101382>}
+				{selectMenuOptions:・Id Card:shop1:change nickname:false:<:special_perk:964165003445944360>}
+				{selectMenuOptions:・Certificate:shop2:100 black holes/h income!:false:<:starlight_perk:964165089710190592>}
+				{selectMenuOptions:・Growth Pack:shop3:talk with other people in the shop servers!:false:<:epic_perk:964165167241900084>}
+				{selectMenuOptions:・Freshman:shop4:custom auto response!:false:<:collector_perk:964165266563031120>}
+			}
+		}]
 		` 
 	},
 	{
