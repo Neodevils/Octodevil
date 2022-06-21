@@ -1,6 +1,6 @@
 module.exports = [
 	{
-		name: "perkMenu",
+		name: "perkStore",
 		type: 'interaction', 
 		prototype: 'button',
 		code: `
@@ -27,17 +27,18 @@ module.exports = [
         ៸៸	$customEmoji[mnsCube] 30 Orindium}	
 		};{actionRow:
 			{selectMenu:shopMenu:・Choose wisely~:1:1:false:
-				{selectMenuOptions:・Attachment:shop0:Want to attach anything into any channels?:false:<:mnsFile:987360063490494514>}
-				{selectMenuOptions:・Id Card:shop1:For Updating your nickname:false:<:mnsPencil:987360587182927893>}
-				{selectMenuOptions:・Certificate:shop2:Get access to bypass AutoMod & mentioning Neo:false:<:mnsImportant:987358720113655951>}
-				{selectMenuOptions:・Growth Pack:shop3:Get AKI Tokens for a week:false:<:mnsToken:987370797402320976>}
-				{selectMenuOptions:・Freshman:shop4:A role, only for you.:false:<:mnsTag:987359840391295016>}
+				{selectMenuOptions:・Attachment:perk0:Want to attach anything into any channels?:false:<:mnsFile:987360063490494514>}
+				{selectMenuOptions:・Id Card:perk1:For Updating your nickname:false:<:mnsPencil:987360587182927893>}
+				{selectMenuOptions:・Certificate:perk2:Get access to bypass AutoMod & mentioning Neo:false:<:mnsImportant:987358720113655951>}
+				{selectMenuOptions:・Growth Pack:perk3:Get AKI Tokens for a week:false:<:mnsToken:987370797402320976>}
+				{selectMenuOptions:・Freshman:perk4:A role, only for you.:false:<:mnsTag:987359840391295016>}
 			}
 		}]
 		` 
 	},
 	{
-		name: "shopMenu",
+// Attachment Perk
+		name: "perkMenu",
 		type: 'interaction', 
 		prototype:'selectMenu', 
 		code: `
@@ -53,7 +54,88 @@ $onlyIf[$hasRoles[$guildID;$authorID;963765637027598357]==false;{"content":"WELL
 
 $onlyIf[$getGlobalUserVar[cube]>=3;{"content": "$nonEscape[Need to collect more $customEmoji[mnsCube] __Orindium__ to buy this perk.]","ephemeral": true, "options":{"interaction" : true}}]
 
-$onlyIf[$interactionData[values[0]]==shop0;]
+$onlyIf[$interactionData[values[0]]==perk0;]
+		`
+	},
+	{
+// Nickname Changing Perk
+		name: "perkMenu",
+		type: 'interaction', 
+		prototype:'selectMenu', 
+		code: `
+    $giveRole[$guildID;$authorID;928642084980793404]
+
+    $setGlobalUserVar[cube;$sub[$getGlobalUserVar[cube];15]]
+
+    $interactionReply[>>> Claimed <@&928642084980793404>,
+
+||Now you have permission to change __change your nickname!__||;;;;;yes]
+	
+    $onlyIf[$hasRoles[$guildID;$authorID;928642084980793404]==false;{"content":"NO! uh... sorry. But, don't expect I'll also give you managenicknames permission. hmph!","ephemeral": true, "options":{"interaction" : true}}]
+
+    $onlyIf[$getGlobalUserVar[cube]>=15;{"content": "$nonEscape[Need to collect more $customEmoji[mnsCube] __Orindium__ to buy this perk.]","ephemeral": true, "options":{"interaction" : true}}]
+
+    $onlyIf[$interactionData[values[0]]==perk1;]
+		`
+	},
+	{
+		name: "perkMenu",
+		type: 'interaction', 
+		prototype:'selectMenu', 
+		code: `
+    $giveRole[$guildID;$authorID;987700992634138625]
+
+    $setGlobalUserVar[cube;$sub[$getGlobalUserVar[cube];18]]
+
+    $interactionReply[>>> Claimed <@&987700992634138625>,
+
+||Now you can __say b-baka words!__||;;;;;yes]
+	
+    $onlyIf[$hasRoles[$guildID;$authorID;987700992634138625]==false;{"content":"Someone wants to get punishment for abusing, i guess?","ephemeral": true, "options":{"interaction" : true}}]
+
+    $onlyIf[$getGlobalUserVar[cube]>=18;{"content": "$nonEscape[Need to collect more $customEmoji[mnsCube] __Orindium__ to buy this perk.]","ephemeral": true, "options":{"interaction" : true}}]
+
+    $onlyIf[$interactionData[values[0]]==perk2;]
+		`
+	},
+	{
+	  name: "perkMenu",
+	  type: 'interaction',
+	  prototype: 'selectMenu',
+	  code: `
+    $giveRole[$guildID;$authorID;895307653851512914]
+
+    $setGlobalUserVar[cube;$sub[$getGlobalUserVar[cube];20]]
+
+    $interactionReply[>>> Claimed <@&895307653851512914>,
+
+||From now, you will be getting __12,000 AKI Tokens__ for 7 days!||;;;;;yes]
+	
+    $onlyIf[$hasRoles[$guildID;$authorID;895307653851512914]==false;{"content":"Sorey but it is only for once so uh...","ephemeral": true, "options":{"interaction" : true}}]
+
+    $onlyIf[$getGlobalUserVar[cube]>=20;{"content": "$nonEscape[Need to collect more $customEmoji[mnsCube] __Orindium__ to buy this perk.]","ephemeral": true, "options":{"interaction" : true}}]
+
+    $onlyIf[$interactionData[values[0]]==perk3;]
+		`
+	},
+ 	{
+		name: "perkMenu",
+		type: 'interaction', 
+		prototype:'selectMenu', 
+		code: `
+$giveRole[$guildID;$authorID;895308742642507817]
+
+$setGlobalUserVar[cube;$sub[$getGlobalUserVar[cube];30]]
+
+$interactionReply[>>> Claimed <@&895308742642507817>,
+
+||Now you can have your own role, __your own color... your own role name and possibly icon...__ Mmmm, also you got Saku's nudez 😳||;;;;;yes]
+	
+$onlyIf[$hasRoles[$guildID;$authorID;895308742642507817]==false;{"content":"a.","ephemeral": true, "options":{"interaction" : true}}]
+
+$onlyIf[$getGlobalUserVar[cube]>=3;{"content": "$nonEscape[Need to collect more $customEmoji[mnsCube] __Orindium__ to buy this perk.]","ephemeral": true, "options":{"interaction" : true}}]
+
+$onlyIf[$interactionData[values[0]]==perk4;]
 		`
 	}
 ]
