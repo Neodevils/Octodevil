@@ -26,7 +26,7 @@ module.exports = [
         ៸៸	<@&895308742642507817>
         ៸៸	$customEmoji[mnsCube] 30 Orindium}	
 		};{actionRow:
-			{selectMenu:shopMenu:・Choose wisely~:1:1:false:
+			{selectMenu:perkMenu:・Choose wisely~:1:1:false:
 				{selectMenuOptions:・Attachment:perk0:Want to attach anything into any channels?:false:<:mnsFile:987360063490494514>}
 				{selectMenuOptions:・Id Card:perk1:For Updating your nickname:false:<:mnsPencil:987360587182927893>}
 				{selectMenuOptions:・Certificate:perk2:Get access to bypass AutoMod & mentioning Neo:false:<:mnsImportant:987358720113655951>}
@@ -79,6 +79,7 @@ $onlyIf[$interactionData[values[0]]==perk0;]
 		`
 	},
 	{
+// Bypassing AutoMod
 		name: "perkMenu",
 		type: 'interaction', 
 		prototype:'selectMenu', 
@@ -99,6 +100,7 @@ $onlyIf[$interactionData[values[0]]==perk0;]
 		`
 	},
 	{
+// Supply Perk
 	  name: "perkMenu",
 	  type: 'interaction',
 	  prototype: 'selectMenu',
@@ -119,6 +121,7 @@ $onlyIf[$interactionData[values[0]]==perk0;]
 		`
 	},
  	{
+// Role Perk
 		name: "perkMenu",
 		type: 'interaction', 
 		prototype:'selectMenu', 

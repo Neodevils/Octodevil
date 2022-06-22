@@ -12,8 +12,8 @@ module.exports = [
 
     $interactionReply[;{newEmbed:
       {author:$userTag:$authorAvatar}
-      {description:$customEmoji[kaeruMoon] You set yourself to afk status. . .
-||$customEmoji[kaeruRight] afk reason⁀➷*$slashOption[cause]*||}
+      {description:$customEmoji[mnsIdle] You set yourself to afk status. . .
+||$customEmoji[kaeruApproved] afk reason⁀➷*$slashOption[cause]*||}
       {color:$getVar[blueHex]}
       {footer:— when did I become afk?⁀➷}
       {timestamp}
@@ -31,7 +31,7 @@ module.exports = [
 
     $reply[$messageID;yes]
 
-    $description[1;$customEmoji[kaeruAlert] **Hey dear, the member you pinged is on idle status right now!**
+    $description[1;$customEmoji[mnsImportant] **Hey dear, the member you pinged is on idle status right now!**
 __Their reason is__
 >>> *\`$getGlobalUserVar[afks;$mentioned[1;no]]\`* for $parseDate[$sub[$dateStamp;$getglobaluservar[afkss;$mentioned[1;no]]];time]]
 
@@ -52,9 +52,9 @@ __Their reason is__
     $deleteVar[afks;$authorID]
     $deleteVar[afkss;$authorID]
 
-    $description[1;$customEmoji[kaeruVerified] Succesfully removed your idle status!
+    $description[1;$customEmoji[mnsVerified] Succesfully removed your idle status!
 You have been afk for \`$parseDate[$sub[$dateStamp;$getglobaluservar[afkss]];time]\`, $randomText[woah;nice] :0
->>> $customEmoji[kaeruRight] __your old afk reason was__・\`$getGlobalUserVar[afks]\`.
+>>> $customEmoji[mnsHint] __your old afk reason was__・\`$getGlobalUserVar[afks]\`.
 $customEmoji[kaeruRight] __while you are afk__・you have been mentioned \`$getGlobalUserVar[afkmm]\` times.
 $customEmoji[kaeruRight] the member mentioned you last time・\`$getGlobalUserVar[afkaa]\` ]
 
