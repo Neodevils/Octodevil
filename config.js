@@ -19,7 +19,7 @@ module.exports = {
       guildBans: 0,
       guildEmojiRoles: 0,
       guildInvites: 0,
-      guildStickers: 0,
+      guildStickers: 0
     }
   }
 }

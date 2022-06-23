@@ -1,13 +1,6 @@
 module.exports = (bot) => {
 //Embed Colors
   bot.variables({
-    brownHex: "#D7BBA7",
-    yellowHex: "#FFE8BA",
-    pinkHex: "#F8CDE2",
-    greenHex: "#BDFFB5",
-    redHex: "#FF7A7A",
-    orangeHex: "#FFAA7C",
-    purpleHex: "#DDB5FF",
     blueHex: "#79B8FF",
     gitHex: "#EC775C",
     invisibleHex: "#303136"
@@ -25,8 +18,7 @@ module.exports = (bot) => {
   bot.variables({ 
     him: "801610025558081567", 
     her: "801609422438006794", 
-    them: "801610167606706186",
-    neo: "958991309031481364"
+    them: "801610167606706186"
   })
 
 //Age
@@ -75,16 +67,6 @@ module.exports = (bot) => {
     wikiUpload: "940881871624089600",
     announce: "801618406817136651",
     welcome: "801618241046315080"
-  })
-  
-//Cards
-  bot.variables({
-    elite: "963676267218108417",
-    special: "928642084980793404",
-    starlight: "963765637027598357",
-    epic: "928641823033942077",
-    collector: "895307653851512914",
-    legend: "895308742642507817"
   })
   
 //Extra Personalities
