@@ -1,7 +1,7 @@
 {
   "name": "Kaeru",
   "version": "1.5.0",
-  "main": "index.js",
+  "main": "Kaeru/index.js",
   "scripts": {
     "test": "node ."
   },
@@ -13,10 +13,15 @@
     "url": "git+https://github.com/NeoAIChan/Kaeru.git"
   },
   "description": "Minesa's bot",
+  "devDependencies": {
+    "node": "^17.9.1",
+    "npm": "^8.13.1"
+  },
   "dependencies": {
     "@akarui/aoi.music": "github:AkaruiDevelopment/music#main",
     "aoi.js": "github:USERSATOSHI/aoi.js#v5",
     "aoi.mongo": "^0.2.0",
-    "mongodb": "^4.5.0"
+    "express": "^4.18.1",
+    "mongodb": "^4.7.0"
   }
 }

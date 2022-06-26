@@ -3,7 +3,6 @@ const aoijs = require('aoi.js');
 const aoimongo = require('aoi.mongo');
 const config = require('./config.js');
 const bot = new aoijs.Bot(config.Bot);
-const keepAlive = require('./server.js');
 
 //Handlers
 require('./handlers/status')(bot);
@@ -51,27 +50,23 @@ bot.functionManager.createCustomFunction({
   name : '$roleIcon',
   type : 'djs',
   code : async (d) => {
-    const data = d.util.aoiFunc(d)
-    const [ roleId, guildId = d.guild?.id ] = data.inside.splits
-    const guild = await d.util.getGuild(d,guildId)
-    if(!guild) return d.aoiError.fnError(d,"guild",{ inside: data.inside})
-    data.result = guild.roles.cache.get(roleId)?.iconURL({ size: 1024, dynamic : true }) 
+    const data = d.util.aoiFunc(d) // this function opens data sent from interpreter
+    const [ roleId, guildId = d.guild?.id ] = data.inside.splits //gets params
+    const guild = await d.util.getGuild(d,guildId) //gets guild object
+    if(!guild) return d.aoiError.fnError(d,"guild",{ inside: data.inside}) //sends invalid guild error
+    data.result = guild.roles.cache.get(roleId)?.iconURL({ size: 1024, dynamic : true }) // returns icon
     return {
-      code : d.util.setCode(data)
+      code : d.util.setCode(data), //sets code 
     }
   }
 });
 
 
 bot.command({
-  name: "c-eval",
-  code: `
-  $createApplicationCommand[$guildID;eval;Only for Neo :3;true;slash;code:etto...:true:3]
-
-  Done daddy :d
-
-  $onlyForIDs[$botOwnerID;]
-  `
+    name: "c-eval",
+    code: `
+	$createApplicationCommand[$guildID;eval;Only for Neo :3;true;slash;code:etto...:true:3]
+	Done daddy :d
+	$onlyForIDs[$botOwnerID;]
+	`
 });
-
-keepAlive()
