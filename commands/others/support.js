@@ -4,7 +4,7 @@ module.exports = [
 		type: 'awaited',
 		code: `
 		$apiMessage[$channelID
-		;$customEmoji[git_issue] — How can we help to you?
+		;$nonEscape[$customEmoji[git_issue]] — How can we help to you?
 		;{newEmbed:
 		  {thumbnail:https://media.discordapp.net/attachments/861208192121569280/990687631581016145/Balksz140_20220626213833.png}
 		  {description:> Please select a menu that you're requesting for help.}
