@@ -5,7 +5,8 @@ module.exports = {
 	code: `
 	$interactionReply[;{newEmbed:
 		{title:$customEmoji[git_renamed] Renamed Successfully}
-		{description:$customEmoji[git_tag] your new nickname is __ᯬ $replaceText[$interactionData[options.data[1].value];undefined;$randomText[foamy;horrible;super;puny;tender;fertile;existing;full;kindly;obeisant;troubled;gratis;lumpy;shiny;dark;needy;whimsical;soggybeam;particled;arrogant;aware;cultured;detective;economist;determined;reduction;perform;dimension;tailed;optimistic;lose;ditch;buyable;slime;shiver;curvy;nasty;small;best;cool;silly;pushy;misty;stale;one;stiff;sick;false;shut;nice;mocha;asleep;ripe;idiotic;unequaled;important;invincible;confused;ethereal;spiky;mellowroomy;uttermost;flat;calm;next;verdant;hilarious;sufficient;aspiring;excellent;toxic;devil;bright]]｜ $interactionData[options.data[0].value]__ *!*}
+		{description:$customEmoji[git_tag] $username (\`$userID\`) requested to change their name.
+		{field:➜ New Nickname:__ᯬ $replaceText[$interactionData[options.data[1].value];undefined;$randomText[foamy;horrible;super;puny;tender;fertile;existing;full;kindly;obeisant;troubled;gratis;lumpy;shiny;dark;needy;whimsical;soggybeam;particled;arrogant;aware;cultured;detective;economist;determined;reduction;perform;dimension;tailed;optimistic;lose;ditch;buyable;slime;shiver;curvy;nasty;small;best;cool;silly;pushy;misty;stale;one;stiff;sick;false;shut;nice;mocha;asleep;ripe;idiotic;unequaled;important;invincible;confused;ethereal;spiky;mellowroomy;uttermost;flat;calm;next;verdant;hilarious;sufficient;aspiring;excellent;toxic;devil;bright]]｜ $interactionData[options.data[0].value]__ *!*}
 		{color:$getVar[invisibleHex]}
 		{footer:$randomText[Seems good!;I find it cute;It suits to you]:$serverIcon}
 		{thumbnail:$authorAvatar}
