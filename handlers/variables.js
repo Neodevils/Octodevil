@@ -1,7 +1,7 @@
 module.exports = (bot) => {
 //Embed Colors
   bot.variables({
-    blueHex: "#79B8FF",
+    blueHex: "#2088FF",
     gitHex: "#EC775C",
     invisibleHex: "#303136"
   })
