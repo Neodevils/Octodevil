@@ -13,9 +13,9 @@ module.exports = [
 		  {timestamp}
 		}
 		;{actionRow:{selectMenu:supMenu_$getServerVar[caseNum]:Select The Issue Type:1:1:no:
-		  {selectMenuOptions:Coding Issue:sup0:— Stuck on a part of coding? Let us help to you 👋:no:<:git_code_review:990691387886419989>}
-		  {selectMenuOptions:General Issue:sup1:— Have an issue with members, server or anything else?:no:<:git_review_requested:990691558716239913>}
-		  {selectMenuOptions:Others:sup2:— Suggesting, partnershipping or asking any questions to staff team.:no:<:git_comment:990691505847033896>}
+		  {selectMenuOptions:Coding Issue:sup0:— Stuck on a part of coding? Let us help to you 👋.:no:<:git_code_review:990691387886419989>}
+		  {selectMenuOptions:General Issue:sup1:— Have an issue with members, server or anything else 🤠?:no:<:git_review_requested:990691558716239913>}
+		  {selectMenuOptions:Others:sup2:— Suggesting, partnershipping or asking any questions to staff team 😎.:no:<:git_comment:990691505847033896>}
 		}}
 		]
 	  `
