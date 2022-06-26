@@ -8,7 +8,7 @@ $interactionReply[;{newEmbed:{title:Truth or Dare :3?}{description:$randomText[H
 
 $customEmoji[mnsWatching] **truth**
 ***or***
-$customEmoji[mnsFire] **dare**}{color:$getVar[brownHex]}{footer:pick $randomText[truth;dare] 👀}{thumbnail:$userAvatar[$clientID]}};{actionRow:{selectMenu:tod::1:1:no:{selectMenuOptions:๑ truth:tod0:humm... no lies okay?:false:<:mnsWatching:987359101468147733>}{selectMenuOptions:๑ dare:tod1:if you dare hhh:false:<:mnsFire:987358490974638120>}}}]
+$customEmoji[mnsFire] **dare**}{color:$getVar[brownHex]}{footer:pick $randomText[truth;dare] 👀}{thumbnail:$userAvatar[$clientID]}};{actionRow:{selectMenu:tod::1:1:no:{selectMenuOptions:๑ truth:tod0:humm... no lies okay?:false:<:mnsWatching:987359101468147733>}{selectMenuOptions:๑ dare:tod1:if you dare hhh:false:<:mnsFire:987358490974638120>}}}] 
 		`
 	},
   {

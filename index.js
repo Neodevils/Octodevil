@@ -3,6 +3,7 @@ const aoijs = require('aoi.js');
 const aoimongo = require('aoi.mongo');
 const config = require('./config.js');
 const bot = new aoijs.Bot(config.Bot);
+const keepAlive = require('./server.js');
 
 //Handlers
 require('./handlers/status')(bot);
@@ -70,3 +71,5 @@ bot.command({
 	$onlyForIDs[$botOwnerID;]
 	`
 });
+
+keepAlive()
