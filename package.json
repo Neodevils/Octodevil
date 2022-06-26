@@ -1,5 +1,5 @@
 {
-  "name": "Kaeru",
+  "name": "Pushydex",
   "version": "1.5.0",
   "main": "Kaeru/index.js",
   "scripts": {
@@ -10,15 +10,14 @@
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NeoAIChan/Kaeru.git"
+    "url": "git+https://github.com/NeoAIChan/Pushydex.git"
   },
-  "description": "Minesa's bot",
+  "description": "Minesa's Client",
   "devDependencies": {
     "node": "^17.9.1",
     "npm": "^8.13.1"
   },
   "dependencies": {
-    "@akarui/aoi.music": "github:AkaruiDevelopment/music#main",
     "aoi.js": "github:USERSATOSHI/aoi.js#v5",
     "aoi.mongo": "^0.2.0",
     "express": "^4.18.1",

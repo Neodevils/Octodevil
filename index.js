@@ -10,14 +10,6 @@ require('./handlers/status')(bot);
 require('./handlers/variables')(bot); 
 require('./handlers/callbacks')(bot);
 
-//Music
-const voice = new aoijs.Voice(bot, {
-  cache: {
-    cacheType: "Memory",
-    enabled: false,
-  } 
-});
-
 //Commands Loader
 const loader = new aoijs.LoadCommands(bot)
 loader.load(bot.cmd, "./commands/")
