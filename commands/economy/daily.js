@@ -3,7 +3,7 @@ module.exports = {
   type: 'interaction', 
   prototype: 'slash',
   code: `
-  $interactionEdit[;{newEmbed:{title:$customEmoji[git_bookmark] Signed-in successfully}{field:꒷꒦ received:➜ $customEmoji[git_ruby] × \`$abbreviate[$multi[1000;$getGlobalUserVar[dailyMultiplier]];1]\` Rubies 
+  $interactionEdit[;{newEmbed:{title:$customEmoji[git_bookmark] Signed-in successfully}{field:꒷꒦ received:➜ $customEmoji[git_ruby] × \`$abbreviate[$multi[100;$getGlobalUserVar[dailyMultiplier]];1]\` Rubies 
 ➜ $customEmoji[git_package] × \`1\` G-Pack}{color:$getVar[invisibleHex]}{thumbnail:$authorAvatar}{footer:🝩 You can sign-in next day 🙌}}]
   
   $wait[$random[2500;3500]ms]
@@ -20,7 +20,7 @@ module.exports = {
   
   $setUserVar[dailyMultiplier;$sum[$getUserVar[dailyMultiplier];1]]
 	
-  $setUserVar[ruby;$math[$getUserVar[ruby]+(100*$getUserVar[dailyMultiplier])]]
+  $setUserVar[ruby;$math[$getUserVar[ruby]+(100*$getGlobalUserVar[dailyMultiplier])]]
 	
   $setGlobalUserVar[cube;$sum[$getGlobalUserVar[cube];1]]
   
