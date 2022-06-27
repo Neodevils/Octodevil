@@ -28,7 +28,7 @@ module.exports = [
     
 		$channelSendMessage[$get[id];Hello <@&959007276402901032> team, <@$authorID> needs your help :3]
 		
-		$let[id;$createThread[$channelID;⨀ Issue ⌗$getServerVar[caseNum];60;private;$messageID;yes]]
+		$let[id;$createThread[$channelID;⨀ Issue ⌗O$getServerVar[caseNum];60;private;$messageID;yes]]
 
 		$interactionUpdate[;{newEmbed:
 		  {title:$customEmoji[kaeruCodingLabel1]$customEmoji[kaeruCodingLabel2]}
@@ -57,7 +57,7 @@ module.exports = [
 		
 		$channelSendMessage[$get[id];<@&959007092537192458>, <@$authorID> wants to report something!]
 		
-		$let[id;$createThread[$channelID;⨀ Issue ⌗$getServerVar[caseNum];60;private;$messageID;yes]]
+		$let[id;$createThread[$channelID;⨀ Issue ⌗O$getServerVar[caseNum];60;private;$messageID;yes]]
 
 		$interactionUpdate[;{newEmbed:
 			{title:$customEmoji[kaeruReportLabel1]$customEmoji[kaeruReportLabel2]}
@@ -86,7 +86,7 @@ module.exports = [
 		
 		$channelSendMessage[$get[id];<@&962292010310586429>, <@$authorID> wants to discuss about something!]
 		
-		$let[id;$createThread[$channelID;⨀ Issue ⌗$getServerVar[caseNum];60;private;$messageID;yes]]
+		$let[id;$createThread[$channelID;⨀ Issue ⌗O$getServerVar[caseNum];60;private;$messageID;yes]]
 
 		$interactionUpdate[;{newEmbed:
 			{title:$customEmoji[kaeruOthersLabel1]$customEmoji[kaeruOthersLabel2]}
