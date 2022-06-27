@@ -18,7 +18,7 @@ module.exports = {
 	
 	$wait[$random[2;4]s]
 	
-	$interactionReply[$customEmoji[git_hint]**・**__$randomText[In Minesa, you can find secrets on pinned messages.;Don't forget to claim your daily!;Completing To-do missions gives you tokens.;Each day sign in gives you an infected cube.;Minesa has some crazy members, they can be dangerous.;Welcome, $username #COLON#)]__]
+	$interactionReply[$customEmoji[git_hint]**・**__$randomText[In Minesa, you can find secrets on pinned messages.;Don't forget to claim your daily!;Completing To-do missions gives you tokens.;Each day sign in gives you an G-Packs.;Minesa has some crazy members, they can be dangerous.;Welcome, $username #COLON#)]__]
 	
 	`
 }

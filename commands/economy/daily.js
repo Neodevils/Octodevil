@@ -6,12 +6,12 @@ module.exports = {
 	
   $setUserVar[dailyMultiplier;$sum[$getUserVar[dailyMultiplier];1]]
 	
-  $setUserVar[token;$math[$getUserVar[token]+(100*$getUserVar[dailyMultiplier])]]
+  $setUserVar[ruby;$math[$getUserVar[ruby]+(100*$getUserVar[dailyMultiplier])]]
 	
   $setGlobalUserVar[cube;$sum[$getGlobalUserVar[cube];1]]
 	
-  $interactionEdit[;{newEmbed:{title:$customEmoji[mnsBookmark] Signed-in successfully}{field:꒷꒦ received:➜ $customEmoji[mnsToken] × \`$abbreviate[$multi[1000;$getGlobalUserVar[dailyMultiplier]];1]\` Rubies 
-➜ $customEmoji[mnsCube] × \`1\` IPack}{color:$getVar[invisibleHex]}{thumbnail:$authorAvatar}{footer:🝩 You can sign-in next day 🙌}}]
+  $interactionEdit[;{newEmbed:{title:$customEmoji[git_bookmark] Signed-in successfully}{field:꒷꒦ received:➜ $customEmoji[git_ruby] × \`$abbreviate[$multi[1000;$getGlobalUserVar[dailyMultiplier]];1]\` Rubies 
+➜ $customEmoji[git_package] × \`1\` G-Pack}{color:$getVar[invisibleHex]}{thumbnail:$authorAvatar}{footer:🝩 You can sign-in next day 🙌}}]
   
   $wait[$random[2500;3500]ms]
   $interactionEdit[100% ✱✱✱✱✱✱✱✱✱✱ 100%]
