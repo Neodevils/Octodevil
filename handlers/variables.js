@@ -1,7 +1,7 @@
 module.exports = (bot) => {
 //Embed Colors
   bot.variables({
-    blueHex: "#2088FF",
+    blueHex: "#79B8FF",
     gitHex: "#EC775C",
     invisibleHex: "#303136"
   })
@@ -85,7 +85,7 @@ module.exports = (bot) => {
   bot.variables({
     profileTitle: "",
     profileDescription: "",
-    token: 0,
+    ruby: 0,
     cube: 0,
     dailyMultiplier: 1
   })
