@@ -4,21 +4,21 @@ module.exports = [
     type: 'interaction',
     prototype: 'slash',
     code: `
-	  $interactionReply[$customEmoji[mnsUploadRepo] __A new wiki has been uploaded!__
+	  $interactionReply[$customEmoji[git_push] __A new wiki file has been uploaded!__
 	  ;{newEmbed:
-		  {field:$customEmoji[mnsVerified] File Name (Recommended):$slashOption[name].js}
-		  {field:$customEmoji[mnsNote] Note from Coder:>>> $slashOption[info]}
-		  {color:$getVar[blueHex]}
+		  {field:$customEmoji[git_write] File Name:$slashOption[name].js}
+		  {field:$customEmoji[git_note] Note from Coder:>>> $slashOption[info]}
+		  {color:$getVar[invisibleHex]}
 		  {image:$slashOption[image]}
 		  {footer:This system made for the users who doesn't able to copy embed messages.}
 	  }
 	  ;{actionRow:
-	    {button:Download:2:codeDownload:false:<:mnsDownload:987360980474400808>}
+	    {button:Download File:2:codeDownload:false:<:git_download:990871358361718805>}
 	  }
 	  ]
 	
 	  $onlyForIDs[$botOwnerID;{
-		  "content": "$nonEscape[$customEmoji[mnsAlert]] This can be made only by Neo for your sake, but you can suggest the code.", 
+		  "content": "$nonEscape[$customEmoji[git_alert]] This can be made only by Neo for your sake, but you can suggest the code.", 
 		  "ephemeral": true, 
 		  "options": {
 			  "interaction":true 
@@ -30,7 +30,7 @@ module.exports = [
     type: 'interaction',
     prototype: 'button',
     code: `
-	  $interactionReply[> $customEmoji[mnsVerified] Feel free to download the file!
+	  $interactionReply[> $customEmoji[git_verified] Tap to download button next to attachment to download it! 🙌
 	  ;
 	  ;
 	  ;{file:$readFile[./templates/$getEmbed[$channelID;$interactionData[message.id];1;field1.value]]:$getEmbed[$channelID;$interactionData[message.id];1;field1.value]}
