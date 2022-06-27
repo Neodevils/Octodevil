@@ -13,7 +13,7 @@ module.exports = {
     $customEmoji[git_package]・**\`$numberSeparator[$getGlobalUserVar[cube;$replaceText[$interactionData[options.data[0].value];undefined;$authorID]]]\`** G-Packs
 		}
 		{color:$getVar[gitHex]}
-		{footer:Overview #$discriminator[$replaceText[$interactionData[options.data[0].value];undefined;$authorID]] — /set-profile to update your profile!:https://media.discordapp.net/attachments/861208192121569280/987689648140726302/1655553945425.png?width=498&height=498}
+		{footer:Overview #$discriminator[$replaceText[$interactionData[options.data[0].value];undefined;$authorID]] — /set-profile to update your profile!:https://media.discordapp.net/attachments/861208192121569280/990945437567553546/1656330196443.png}
 	}]
 	
 	$wait[$random[2;4]s]
