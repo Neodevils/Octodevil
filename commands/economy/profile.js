@@ -7,7 +7,7 @@ module.exports = {
 	{newEmbed:
 		{author:$username[$replaceText[$interactionData[options.data[0].value];undefined;$authorID]]/readme.md:https\\://media.discordapp.net/attachments/861208192121569280/980187260366516285/1653765241741.png}
 		{thumbnail:$userAvatar[$replaceText[$interactionData[options.data[0].value];undefined;$authorID]]}
-		{title:$getGlobalUserVar[profileTitle;$$replaceText[$interactionData[options.data[0].value];undefined;$authorID]]}
+		{title:$getGlobalUserVar[profileTitle;$replaceText[$interactionData[options.data[0].value];undefined;$authorID]]}
 		{description:$getGlobalUserVar[profileDescription;$replaceText[$interactionData[options.data[0].value];undefined;$authorID]]}
 		{field:Balance:$customEmoji[git_ruby]・**\`$numberSeparator[$getUserVar[ruby;$replaceText[$interactionData[options.data[0].value];undefined;$authorID]]]\`** Rubies
     $customEmoji[git_package]・**\`$numberSeparator[$getGlobalUserVar[cube;$replaceText[$interactionData[options.data[0].value];undefined;$authorID]]]\`** G-Packs
