@@ -9,9 +9,9 @@
     $if[$hasPerms[$guildID;$clientID;managenicknames]==true]
     $if[$authorID!=$ownerID]
     $if[$nickname!=]
-    $changeNickname[$authorID;⊖ $nickname;User went to afk status.]
+    $changeNickname[$authorID;{afk} $nickname;User went to afk status.]
     $else
-    $changeNickname[$authorID;⊖ $nickname;User went to afk status.]
+    $changeNickname[$authorID;{afk} $nickname;User went to afk status.]
     $endif
     $endif
     $endif
@@ -42,7 +42,7 @@
     $if[$rolePosition[$highestRole]>$rolePosition[$highestRole[$clientID]]]
     $if[$hasPerms[$guildID;$clientID;managenicknames]==true]
     $if[$authorID!=$ownerID]
-    $changeNickname[$authorID;$replaceText[$nickname;⊖ ;;]; They're no longer on afk status.]
+    $changeNickname[$authorID;$replaceText[$nickname;{afk};;];They're no longer on afk status.]
     $endif
     $endif
     $endif
@@ -74,7 +74,7 @@ $customEmoji[git_mention] The user mentioned you last time・\`$getGlobalUserVar
 The member you pinged is on __afk status__ right now!
 
 $customEmoji[git_closed] Their reason is...
->>> ***$getGlobalUserVar[afkr;$mentioned[1;yes]]***
+>>> ***$getGlobalUserVar[afkr;$mentioned[1;no]]***
 
 And you're the one who mentioned them last \`🙃\`]
 
