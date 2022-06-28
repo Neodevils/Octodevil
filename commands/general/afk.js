@@ -71,6 +71,8 @@ $customEmoji[git_mention] The user mentioned you last time・\`$getGlobalUserVar
 >>> $noMentionMessage
 In __$serverName__.;$mentioned[1;no]]
 
+    $onlyIf[$isUserDmEnabled[$mentioned[1;no]]==true;{delete:5s}$customEmoji[git_alert] Your __direct message__ must be open to this property work!]
+    
     $reply[$messageID;yes]
 
     $description[1;$customEmoji[git_alert] Hey $userTag 👋
