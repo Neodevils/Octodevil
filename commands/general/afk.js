@@ -67,11 +67,12 @@ $customEmoji[git_mention] The user mentioned you last time・\`$getGlobalUserVar
 
     $setGlobalUserVar[afkmm;$sum[$getGlobalUserVar[afkmm;$mentioned[1;no]];1];$mentioned[1;no]]
     
-    $sendDM[$customEmoji[git_mention] • **$userTag** mentioned you with...
->>> $noMentionMessage
+    $if[$isUserDmEnabled[$mentioned[1;no]]==true]
+    $sendDM[$customEmoji[git_mention] • **$userTag** mentioned you
+>>> 
+$noMentionMessage
 In __$serverName__.;$mentioned[1;no]]
-
-    $onlyIf[$isUserDmEnabled[$mentioned[1;no]]==true;{delete:5s}$customEmoji[git_alert] Your __direct message__ must be open to this property work!]
+    $endif
     
     $reply[$messageID;yes]
 
