@@ -16,7 +16,6 @@
     $endif
     $endif
     $endif
-    
     $interactionReply[;{newEmbed:
       {author:$userTag:$authorAvatar}
       {description:$customEmoji[git_moon] You marked yourself as afk with...
@@ -67,6 +66,10 @@ $customEmoji[git_mention] The user mentioned you last time・\`$getGlobalUserVar
     $setGlobalUserVar[afkaa;$userTag[$authorID];$mentioned[1;no]]
 
     $setGlobalUserVar[afkmm;$sum[$getGlobalUserVar[afkmm;$mentioned[1;no]];1];$mentioned[1;no]]
+    
+    $sendDM[$customEmoji[git_mention] • **$userTag** mentioned you with...
+>>> $noMentionedMessage
+In __$serverName__.;$mentioned[1;no]]
 
     $reply[$messageID;yes]
 
