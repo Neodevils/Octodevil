@@ -55,8 +55,8 @@
     
 >>> $customEmoji[git_closed] **Succesfully removed your AFK status.**
 
-$customEmoji[git_details] Tap to message to see details.
-||$customEmoji[git_clock] Been afk for・\`<t:$truncate[$divide[$getGlobalUserVar[afkmm];1000]:R>\`
+$customEmoji[git_details] Tap the message to see details.
+||$customEmoji[git_clock] Marked as AFK・<t:$truncate[$divide[$getGlobalUserVar[afkss];1000]]:R>
 $customEmoji[git_hint] Your old afk reason was・\`$getGlobalUserVar[afkr]\`.
 $customEmoji[git_next] While you are afk・You've been mentioned \`$getGlobalUserVar[afkmm]\` times.
 $customEmoji[git_mention] The user mentioned you last time・\`$getGlobalUserVar[afkaa]\`||
@@ -73,15 +73,13 @@ $customEmoji[git_mention] The user mentioned you last time・\`$getGlobalUserVar
     $description[1;$customEmoji[git_alert] Hey $userTag 👋
 The member you pinged is on __afk status__ right now!
 
-$customEmoji[git_closed] Their reason is...
->>> ***$getGlobalUserVar[afkr;$mentioned[1;no]]***
-
-And you're the one who mentioned them last \`🙃\`]
+$customEmoji[git_clock] • <t:$truncate[$divide[$getGlobalUserVar[afkss;$mentioned[1;no]];1000]]:R>
+And you're the one who $customEmoji[git_mention] mentioned them last \`🙃\`]
+    $color[1;$getVar[gitHex]]
 
     $endif
     $endelseif
     $endif
-    $wait[1ms]
     `
   }
 ]
