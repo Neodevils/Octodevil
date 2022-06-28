@@ -68,7 +68,7 @@ $customEmoji[git_mention] The user mentioned you last time・\`$getGlobalUserVar
     $setGlobalUserVar[afkmm;$sum[$getGlobalUserVar[afkmm;$mentioned[1;no]];1];$mentioned[1;no]]
     
     $sendDM[$customEmoji[git_mention] • **$userTag** mentioned you with...
->>> $noMentionedMessage
+>>> $noMentionMessage
 In __$serverName__.;$mentioned[1;no]]
 
     $reply[$messageID;yes]
