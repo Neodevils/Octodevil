@@ -1,4 +1,4 @@
-module.exports = [
+  module.exports = [
   {
     name: "afk",
     $if: "v4",
@@ -19,7 +19,7 @@ module.exports = [
       {author:$userTag:$authorAvatar}
       {description:$customEmoji[git_moon] You marked yourself as afk with...
 > 
-> $customEmoji[git_closed] __$slashOption[cause]__}
+> $customEmoji[git_closed] __$slashOption[cause]__ reason.}
       {color:$getVar[gitHex]}
       {footer:— When did I become afk?}
       {timestamp}
@@ -50,11 +50,13 @@ module.exports = [
     $deleteVar[afkr;$authorID]
     $deleteVar[afkss;$authorID]
     
-    $description[1;$customEmoji[git_verified] Succesfully removed your AFK status.
-You have been afk for \`$parseDate[$sub[$dateStamp;$getglobaluservar[afkss]];time]\`, $randomText[woah;nice] \`😲\`
->>> $customEmoji[git_hint] __your old afk reason was__・\`$getGlobalUserVar[afkr]\`.
-$customEmoji[git_next] __while you are afk__・you have been mentioned \`$getGlobalUserVar[afkmm]\` times.
-$customEmoji[kaeruRight] the member mentioned you last time・\`$getGlobalUserVar[afkaa]\` ]
+>>> $customEmoji[git_closed] **Succesfully removed your AFK status.**
+
+$customEmoji[git_details] Tap to message to see details.
+||$customEmoji[git_time] Been afk for・\`<t:$sum[$dateStamp;$getglobaluservar[afkss]]:R>\`
+$customEmoji[git_hint] Your old afk reason was・\`$getGlobalUserVar[afkr]\`.
+$customEmoji[git_next] While you are afk・You've been mentioned \`$getGlobalUserVar[afkmm]\` times.
+$customEmoji[git_mention] The user mentioned you last time・\`$getGlobalUserVar[afkaa]\`||
     
     $elseif[$mentioned[1;yes]!=$authorID]
     $if[$getGlobalUserVar[afk;$mentioned[1]]==true]
@@ -65,9 +67,11 @@ $customEmoji[kaeruRight] the member mentioned you last time・\`$getGlobalUserVa
 
     $reply[$messageID;yes]
 
-    $description[1;$customEmoji[mnsImportant] **Hey dear, the member you pinged is on idle status right now!**
-__Their reason is__
->>> *\`$getGlobalUserVar[afks;$mentioned[1;no]]\`* for $parseDate[$sub[$dateStamp;$getglobaluservar[afkss;$mentioned[1;no]]];time]]
+    $description[1;$customEmoji[git_alert] Hey $userTag 👋
+The member you pinged is on __afk status__ right now!
+
+$customEmoji[git_closed] Their reason is...
+>>> *\`$getGlobalUserVar[afks;$mentioned[1;yes]]\`* for $parseDate[$sub[$dateStamp;$getglobaluservar[afkss;$mentioned[1;yes]]];time]]
 
     $endif
     $endelseif
