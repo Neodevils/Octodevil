@@ -55,7 +55,7 @@
 >>> $customEmoji[git_closed] **Succesfully removed your AFK status.**
 
 $customEmoji[git_details] Tap to message to see details.
-||$customEmoji[git_time] Been afk for・\`<t:$sum[$dateStamp;$getglobaluservar[afkss]]:R>\`
+||$customEmoji[git_clock] Been afk for・\`<t:$sum[$dateStamp;$getglobaluservar[afkss]]:R>\`
 $customEmoji[git_hint] Your old afk reason was・\`$getGlobalUserVar[afkr]\`.
 $customEmoji[git_next] While you are afk・You've been mentioned \`$getGlobalUserVar[afkmm]\` times.
 $customEmoji[git_mention] The user mentioned you last time・\`$getGlobalUserVar[afkaa]\`||
@@ -73,7 +73,7 @@ $customEmoji[git_mention] The user mentioned you last time・\`$getGlobalUserVar
 The member you pinged is on __afk status__ right now!
 
 $customEmoji[git_closed] Their reason is...
->>> *\`$getGlobalUserVar[afks;$mentioned[1;yes]]\`* for $parseDate[$sub[$dateStamp;$getglobaluservar[afkss;$mentioned[1;yes]]];time]]
+>>> *\`$getGlobalUserVar[afkr;$mentioned[1;yes]]\`* for $parseDate[$sub[$dateStamp;$getglobaluservar[afkss;$mentioned[1;yes]]];time]]
 
     $endif
     $endelseif
