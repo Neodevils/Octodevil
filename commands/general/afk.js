@@ -1,6 +1,8 @@
   module.exports = [
   {
     name: "afk",
+    type: 'interaction',
+    prototype: 'slash',
     $if: "v4",
     code: `
     $if[$rolePosition[$highestRole]>$rolePosition[$highestRole[$clientID]]]
