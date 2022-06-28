@@ -101,11 +101,11 @@ module.exports = (bot) => {
     joined:"0",
     joinedusers:"",
     ended:"false",
-    afks: "",
-    afk: "hayır",
+    afkr: "",
+    afk: "false",
     afkss:"",
     afkmm:"0",
     afkc: "0",
-    afkaa:"No one has mentioned :3"
+    afkaa:"No one mentioned you."
   })
 }
