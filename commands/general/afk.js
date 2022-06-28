@@ -42,7 +42,7 @@
     $if[$rolePosition[$highestRole]>$rolePosition[$highestRole[$clientID]]]
     $if[$hasPerms[$guildID;$clientID;managenicknames]==true]
     $if[$authorID!=$ownerID]
-    $changeNickname[$authorID;$replaceText[$nickname;{afk};;];They're no longer on afk status.]
+    $changeNickname[$authorID;$replaceText[$nickname;{afk} ;];They're no longer on afk status.]
     $endif
     $endif
     $endif
