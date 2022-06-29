@@ -18,8 +18,8 @@ module.exports = [
     type: 'awaited',
     code: `
     $interactionFollowUp[\`\`\`javascript
-    $eval[$slashOption[code];yes;yes;yes;yes]]
-    \`\`\`
+$eval[$slashOption[code];yes;yes;yes;yes]
+    \`\`\`]
     
     $interactionDefer
     `
@@ -29,8 +29,8 @@ module.exports = [
     type: 'awaited',
     code: `
     $interactionFollowUp[\`\`\`javascript
-    $djseval[$slashOption[code];yes]
-    \`\`\`
+$djseval[$slashOption[code];yes]
+    \`\`\`]
     
     $interactionDefer
     `
