@@ -17,7 +17,9 @@ module.exports = [
     name: "aoijseval",
     type: 'awaited',
     code: `
+    \`\`\`javascript
     $interactionFollowUp[$eval[$slashOption[code];yes;yes;yes;yes]]
+    \`\`\`
     
     $interactionDefer
     `
@@ -26,7 +28,9 @@ module.exports = [
     name: "djseval",
     type: 'awaited',
     code: `
+    \`\`\`javascript
     $interactionFollowUp[$djseval[$slashOption[code];yes]
+    \`\`\`
     
     $interactionDefer
     `
