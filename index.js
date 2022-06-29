@@ -58,8 +58,10 @@ bot.functionManager.createCustomFunction({
 bot.command({
     name: "c-eval",
     code: `
-	$createApplicationCommand[$guildID;eval;Only for Neo :3;true;slash;code:etto...:true:3]
-	Done daddy :d
+	$createApplicationCommand[$guildID;eval; Developers only.;true;slash;{string:do:Pick a type 🐢:true:{choice:ɑ • d.js:djsEval}{choice:β • aoi.js:aoijsEval}{choice:η • Update Commands:updCmds}}{string:code:Cool codes written down here 🚀:false:3]
+	
+	Successfully created it. \`🤠\`
+	
 	$onlyForIDs[$botOwnerID;]
 	`
 });
