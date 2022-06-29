@@ -56,7 +56,7 @@ bot.functionManager.createCustomFunction({
 
 
 bot.command({
-    name: "c-eval",
+    name: "c-dev",
     code: `
 	$createApplicationCommand[$guildID;dev; Developers only.;true;slash;{string:do:Pick a type 🐢:yes:{choice:ɑ • d.js:djsEval}{choice:β • aoi.js:aoijsEval}{choice:η • Update Commands:updCmds}}{string:code:Cool codes written down here 🚀:no}]
 	
