@@ -67,7 +67,7 @@ $customEmoji[git_mention] The user mentioned you last time・\`$getGlobalUserVar
 
     $setGlobalUserVar[afkmm;$sum[$getGlobalUserVar[afkmm;$mentioned[1;no]];1];$mentioned[1;no]]
     
-    $if[$isUserDmEnabled[$mentioned[1;no]]==true]
+    $if[$isUserDmEnabled[$mentioned[1;yes]]==true]
     $sendDM[$customEmoji[git_mention] • **$userTag** mentioned you
 >>> 
 $noMentionMessage
@@ -76,9 +76,9 @@ In __$serverName__.;$mentioned[1;no]]
     
     $reply[$messageID;yes]
 
-    $description[1;$customEmoji[git_alert] Hey $userTag 👋
-The member you pinged is on __afk status__ right now!
-
+    $description[1;$customEmoji[git_alert] Hey $userTag \`👋\`
+The member you pinged is on **afk status** right now!
+$customEmoji[git_hint] • __$getGlobalUserVar[afkr]__
 $customEmoji[git_clock] • <t:$truncate[$divide[$getGlobalUserVar[afkss;$mentioned[1;no]];1000]]:R>
 And you're the one who $customEmoji[git_mention] mentioned them last \`🙃\`]
     $color[1;$getVar[gitHex]]
