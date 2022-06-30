@@ -78,7 +78,7 @@ In __$serverName__.;$mentioned[1;no]]
 
     $description[1;$customEmoji[git_alert] Hey $userTag \`👋\`
 The member you pinged is on **afk status** right now!
-$customEmoji[git_hint] • __$getGlobalUserVar[afkr]__
+$customEmoji[git_hint] • __$getGlobalUserVar[afkr;$mentioned[1;no]]__
 $customEmoji[git_clock] • <t:$truncate[$divide[$getGlobalUserVar[afkss;$mentioned[1;no]];1000]]:R>
 And you're the one who $customEmoji[git_mention] mentioned them last \`🙃\`]
     $color[1;$getVar[gitHex]]
