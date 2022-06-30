@@ -80,7 +80,7 @@ In __$serverName__.;$mentioned[1;no]]
 The member you pinged is on **afk status** right now!
 $customEmoji[git_hint] • __$getGlobalUserVar[afkr;$mentioned[1;no]]__
 $customEmoji[git_clock] • <t:$truncate[$divide[$getGlobalUserVar[afkss;$mentioned[1;no]];1000]]:R>
-And you're the one who $customEmoji[git_mention] mentioned them last \`🙃\`]
+And you're the last one who $customEmoji[git_mention] mentioned them \`🙃\`]
     $color[1;$getVar[gitHex]]
 
     $endif
