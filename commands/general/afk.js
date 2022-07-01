@@ -9,9 +9,9 @@
     $if[$hasPerms[$guildID;$clientID;managenicknames]==true]
     $if[$authorID!=$ownerID]
     $if[$nickname!=]
-    $changeNickname[$authorID;{afk} $nickname;User went to afk status.]
+    $changeNickname[$authorID;₍ afk ₎ $nickname[$authorID;yes];User went to afk status.]
     $else
-    $changeNickname[$authorID;{afk} $nickname;User went to afk status.]
+    $changeNickname[$authorID;₍ afk ₎ $nickname[$authorID;yes];User went to afk status.]
     $endif
     $endif
     $endif
@@ -41,7 +41,7 @@
     $if[$rolePosition[$highestRole]>$rolePosition[$highestRole[$clientID]]]
     $if[$hasPerms[$guildID;$clientID;managenicknames]==true]
     $if[$authorID!=$ownerID]
-    $changeNickname[$authorID;$replaceText[$nickname;{afk} ;];They're no longer on afk status.]
+    $changeNickname[$authorID;$replaceText[$nickname;₍ afk ₎ ;];They're no longer on afk status.]
     $endif
     $endif
     $endif
@@ -78,6 +78,7 @@ In __$serverName__.;$mentioned[1;no]]
 
     $description[1;$customEmoji[git_alert] Hey $userTag \`👋\`
 The member you pinged is on **afk status** right now!
+
 $customEmoji[git_hint] • __$getGlobalUserVar[afkr;$mentioned[1;no]]__
 $customEmoji[git_clock] • <t:$truncate[$divide[$getGlobalUserVar[afkss;$mentioned[1;no]];1000]]:R>
 And you're the last one who $customEmoji[git_mention] mentioned them \`🙃\`]
