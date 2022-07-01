@@ -9,9 +9,9 @@
     $if[$hasPerms[$guildID;$clientID;managenicknames]==true]
     $if[$authorID!=$ownerID]
     $if[$nickname!=]
-    $changeNickname[$authorID;₍ afk ₎ $nickname[$authorID;yes];User went to afk status.]
+    $changeNickname[$authorID;₍ afk ₎ $nickname[$authorID;;$guildID;yes];User went to afk status.]
     $else
-    $changeNickname[$authorID;₍ afk ₎ $nickname[$authorID;yes];User went to afk status.]
+    $changeNickname[$authorID;₍ afk ₎ $nickname[$authorID;$guildID;yes];User went to afk status.]
     $endif
     $endif
     $endif
