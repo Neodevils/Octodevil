@@ -1,20 +1,44 @@
-module.exports = {
+module.exports = [{
   name: "function",
-  type: 'interaction', 
-  prototype: 'slash', 
+  type: "interaction",
+  $if: "v4",
+  prototype: "slash",
   code: `
-  $interactionReply[;{newEmbed:
-    {author:$userTag:$authorAvatar}
-    {thumbnail:https://media.discordapp.net/attachments/987355726257201204/987393691360592003/code.png}
-    {field:$customEmoji[git_pending] Function Name:\`\`\`php
-$jsonRequest[https://api.leref.ga/functions/$interactionData[options.data[0].value];data[0].name;{"content":"Some...thing... went... w...rong..."}]\`\`\`}
-    {field:$customEmoji[git_hint] Usage:\`\`\`javascript
-$jsonRequest[https://api.leref.ga/functions/$interactionData[options.data[0].value];data[0].usage]\`\`\`}
-    {field:$customEmoji[git_info] Description:\`\`\`js
-$jsonRequest[https://api.leref.ga/functions/$interactionData[options.data[0].value];data[0].desc]\`\`\`}
-    {field:$customEmoji[git_code] Source Code:[Tap to here]($replaceText[https://github.com/Leref/aoi.js/blob/master/package/functions/funcs/$interactionData[options.data[0].value].js;$;])}
-    {footer:Note#COLON# For checking source code, please enter full name of function!}
-    {color:$getVar[invisibleHex]}
-  }]
+  $if[$isAutocomplete==true]
+  
+    $if[$message[1]!=&&$message[1]!=$]
+      $autocompleteRespond[$djseval[
+        JSON.stringify(client.functionManager.functions.filter(x => x.toLowerCase().startsWith("$slashOption[name]".toLowerCase())).map(x =>{  return {name : x, value : x.toLowerCase()}}));yes]]
+        
+    $endif
+    
+  $else
+  
+    $interactionReply[;
+      {newEmbed:
+        {author:$userTag:$authorAvatar}
+        {thumbnail:https://media.discordapp.net/attachments/987355726257201204/987393691360592003/code.png}
+        {field:$customEmoji[git_pending] Function Name:\`\`\`js\n$slashOption[name]\n\`\`\`}
+        {field:$customEmoji[git_hint] Usage:\`\`\`js
+$djseval[const a = client.functionManager.usage.get(client.functionManager.functions.find(x => x.toLowerCase().startsWith(args.join(" ").toLowerCase()))?.toLowerCase())
+a === null ? " — No Parameters Found." : a === undefined ? " — Usage Not Found." : client.functionManager.functions.find(x => x.toLowerCase().startsWith(args.join(" ").toLowerCase()))+a;yes]
+\`\`\`}
+        {color:$getVar[invisibleHex]}
+      };{actionRow:{button:Show source code:2:source_$slashOption[name]:false:$nonEscape[$customEmoji[git_code]]}}
+    ]
+    
+  $endif
   `
-}
+}, {
+  type: 'interaction',
+  prototype: 'button',
+  code: `
+\`\`\`js
+$djsEval[client.functionManager.cache.get("$get[name]").code.toString();yes]\`\`\`
+$onlyIf[$get[customId]==source;]
+
+$let[name;$splitText[2]]
+$let[customId;$splitText[1]]
+$textSplit[$interactionData[customId];_]
+  `
+}]
