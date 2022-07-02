@@ -14,6 +14,14 @@ require('./handlers/callbacks')(bot);
 const loader = new aoijs.LoadCommands(bot)
 loader.load(bot.cmd, "./commands/")
 
+//Music Class
+const voice = new aoijs.Voice(bot, {
+  cache: {
+    cacheType: "Memory",
+    enabled: false,
+  }
+});
+
 //For Colorful Console
 
 loader.setColors({

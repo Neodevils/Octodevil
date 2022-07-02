@@ -1,7 +1,7 @@
 {
-  "name": "Pushydex",
+  "name": "octodevil",
   "version": "1.5.0",
-  "main": "Kaeru/index.js",
+  "main": "Octodevil/index.js",
   "scripts": {
     "test": "node ."
   },
@@ -10,7 +10,7 @@
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NeoAIChan/Pushydex.git"
+    "url": "git+https://github.com/NeoAIChan/Octodevil.git"
   },
   "description": "Minesa's Client",
   "devDependencies": {
