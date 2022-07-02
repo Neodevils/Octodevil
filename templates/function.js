@@ -1,32 +1,44 @@
 module.exports = [
   {
-    name: "c-function", 
-    code: `$reply[$messageID;yes]
+    name: "c-function",
+    code: `
+    $reply[$messageID;yes]
+      
+    Created function slash interaction command successfully.
+      
+    $createApplicationCommand[$guildID;function;Check usage of function ;true;slash;{ 
+        "name" : "name",
+        "description" : "Please pick the function you're search for.",
+        "required" : true,
+        "type" : 3,
+        "autocomplete" : true
+      }]
 
-Created function slash interaction successfully.
 
-$createApplicationCommand[$guildID;function;Find an aoi.js function and see the usage.;true;slash;name:Please write it is name:true:3]
-
-$onlyPerms[admin;You're missing \`ADMINISTRATOR\` permission to create it.]
-		`
-  }, 
-	{
-		name: "function",
-		type: 'interaction', 
-		prototype: 'slash', 
-		code: `
-		$interactionFollowUp[;{newEmbed:
-			{title:Searched for $slashOption[name]}
-			{author:aoi.js (stable)}
-			{thumbnail:$userAvatar[$clientID]}
-			{field: Usage:\`\`\`
-$jsonRequest[https://api.leref.ga/functions/$interactionData[options.data[0].value];data[0].usage;{"content":"Couldn't find that function"}]\`\`\`}
-			
-			{field:Source:[Source Code]($replaceText[https://github.com/Leref/aoi.js/blob/master/package/functions/funcs/$interactionData[options.data[0].value].js;$;]):yes}}
-			{timestamp}
-			{color: #abcdef}
-		}]
-   $interactionDefer
-		`
-	}
+      $onlyPerms[admin;You're missing \`ADMINISTRATOR\` permission to create it.]
+      `
+  },
+  {
+    name: "function",
+    type: "interaction",
+    $if: "v4",
+    prototype: "slash",
+    code: `
+    $if[$isAutocomplete==true]
+  
+      $if[$message[1]!=&&$message[1]!=$]
+        $autocompleteRespond[$djseval[
+          JSON.stringify(client.functionManager.functions.filter(x => x.toLowerCase().startsWith("$slashOption[name]".toLowerCase())).map(x =>{  return {name : x, value : x.toLowerCase()}}));yes]]
+        
+      $endif
+    
+    $else
+  
+      $interactionReply[>>> Function Name\n\`\`\`js\n$slashOption[name]\n\`\`\`\n\nUsage\`\`\`js\n$djseval[const a = client.functionManager.usage.get(client.functionManager.functions.find(x => x.toLowerCase().startsWith(args.join(" ").toLowerCase()))?.toLowerCase()) 
+      a === null ? " No Params" : a === undefined ? " No Usage." : client.functionManager.functions.find(x => x.toLowerCase().startsWith(args.join(" ").toLowerCase()))+a;yes]\n\`\`\`
+      ]
+    
+    $endif
+    `
+  }
 ]
