@@ -20,7 +20,7 @@ module.exports = [{
         {thumbnail:https://media.discordapp.net/attachments/987355726257201204/987393691360592003/code.png}
         {field:$customEmoji[git_pending] Function Name:\`\`\`js\n$slashOption[name]\n\`\`\`}
         {field:$customEmoji[git_hint] Usage:\`\`\`js
-$djseval[const a = client.functionManager.usage.get(client.functionManager.functions.find(x => x.toLowerCase().startsWith(args.join(" ").toLowerCase()))?.toLowerCase())
+$djseval[const a = client.functionManager.usage.get(client.functionManager.functions.find(x =>  x.toLowerCase().startsWith(args.join(" ").toLowerCase()))?.toLowerCase())
 a === null ? " — No Parameters Found." : a === undefined ? " — Usage Not Found." : client.functionManager.functions.find(x => x.toLowerCase().startsWith(args.join(" ").toLowerCase()))+a;yes]
 \`\`\`}
         {color:$getVar[invisibleHex]}
@@ -33,7 +33,7 @@ a === null ? " — No Parameters Found." : a === undefined ? " — Usage Not Fou
   type: 'interaction',
   prototype: 'button',
   code: `
-  $interactionReply[\`\`\`js\\n$djsEval[client.functionManager.cache.get("$replaceText[$get[name];$;]").code.toString();yes]\\n\`\`\`;;;;;yes]
+  $interactionReply[\`\`\`js\n$djsEval[client.functionManager.cache.get("$replaceText[$get[name];$;]").code.toString();yes]\n\`\`\`;;;;;yes]
   
   $onlyIf[$get[customId]==source;]
 
