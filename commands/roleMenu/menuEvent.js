@@ -1,7 +1,7 @@
 module.exports = [
   {
     name: "menuCustomId",
-    type: "interaction",
+    type: 'interaction',
     prototype: 'selectMenu',
     code: `
     $interactionFollowUp[$get[answers]]
@@ -19,13 +19,14 @@ module.exports = [
     $if: "v4",
     code: `
     $textTrim[
-    $if[$hasRoles[$guildId;$interactionData[author.id];{value}]==true]
-    $takeRole[$guildid;$interactionData[author.id];{value}]
-    Removed <@&{value}>
-    $else
-    $giveRole[$guildId;$interactionData[author.id];{value}]
-    Added <@&{value}>
-    $endif
-    ]`
+      $if[$hasRoles[$guildId;$interactionData[author.id];{value}]==true]
+        $takeRole[$guildid;$interactionData[author.id];{value}]
+$customEmoji[git_removed] Removed <@&{value}>
+      $else
+        $giveRole[$guildId;$interactionData[author.id];{value}]
+$customEmoji[git_added] Added <@&{value}>
+      $endif
+    ]
+    `
   }
 ]
