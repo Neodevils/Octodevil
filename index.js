@@ -19,6 +19,9 @@ const voice = new aoijs.Voice(bot, {
   cache: {
     cacheType: "Memory",
     enabled: false,
+  },
+	playerOptions: {
+    trackInfoInterval: 5000,
   }
 });
 

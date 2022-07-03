@@ -9,7 +9,7 @@ module.exports = [
   
       $if[$message[1]!=&&$message[1]!=$]
         $autocompleteRespond[
-          $djseval[JSON.stringify(client.functionManager.functions.filter(x => x.toLowerCase().startsWith("$slashOption[name]".toLowerCase())).map(x =>{  return {name : x, value : x.toLowerCase()}}));yes]
+          $djseval[JSON.stringify(client.functionManager.functions.filter(x => x.toLowerCase().startsWith("$slashOption[name]".toLowerCase())).map(x =>{  return {name : x, value : x}}));yes]
         ]
       $endif
     
