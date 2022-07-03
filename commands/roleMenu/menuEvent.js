@@ -4,14 +4,14 @@ module.exports = [
     type: "interaction",
     prototype: 'selectMenu',
     code: `
-    $interactionFollowUp[>>> $get[answers]]
+    $interactionFollowUp[$get[answers]]
 
     $let[answers;$arrayMap[values;awaitChanging;]]
 
     $interactionDefer[yes]
 
     $createarray[values;$nonEscape[$interactionData[values.join(";")]]]
-    `,
+    `
   },
   {
     name: "awaitChanging",
