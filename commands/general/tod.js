@@ -6,7 +6,7 @@ module.exports = [
     code: `
     $interactionReply[;{newEmbed:
       {title:Truth or Dare :3?}
-      {description:$randomText[Hewwo;Hiii;Hellooo] *!* You got two options to pick. . .\\n\\n$nonEscape[$customEmoji[git_eye]] **truth**\\n***or***\\n$customEmoji[git_fire] **dare**}
+      {description:$randomText[Hewwo;Hiii;Hellooo] *!* You got two options to pick. . .\n\n$nonEscape[$customEmoji[git_eye]] **truth**\n***or***\n$customEmoji[git_fire] **dare**}
       {color:$getVar[blueHex]}
       {footer:pick $randomText[truth;dare] 👀}
       {thumbnail:$userAvatar[$clientID]}
