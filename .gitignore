@@ -1,1 +1,4 @@
 node_modules
+commands/general/ero.js
+commands/general/icon_nsfw.js
+commands/general/icon_sfw.js
