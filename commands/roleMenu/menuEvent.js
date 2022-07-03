@@ -4,7 +4,7 @@ module.exports = [
     type: "interaction",
     prototype: 'selectMenu',
     code: `
-    $interactionFollowUp[$get[answers]]
+    $interactionFollowUp[>>> $get[answers]]
 
     $let[answers;$arrayMap[values;awaitChanging;]]
 
@@ -24,7 +24,7 @@ module.exports = [
     $customEmoji[git_removed] Removed\n> <@&{value}>
     $else
     $giveRole[$guildId;$interactionData[author.id];{value}]
-    $customEmoji[git_added] Added \n> <@&{value}>
+    $customEmoji[git_added] Added\n> <@&{value}>
     $endif
     ]
     `
