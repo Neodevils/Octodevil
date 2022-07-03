@@ -33,12 +33,11 @@ a === null ? " — No Parameters Found." : a === undefined ? " — Usage Not Fou
   type: 'interaction',
   prototype: 'button',
   code: `
-\`\`\`js
-$djsEval[client.functionManager.cache.get("$get[name]").code.toString();yes]\`\`\`
-$onlyIf[$get[customId]==source;]
+  $interactionReply[\`\`\`js\\n$djsEval[client.functionManager.cache.get("$replaceText[$get[name];$;]").code.toString();yes]\\n\`\`\`;;;;;yes]
+  $onlyIf[$get[customId]==source;]
 
-$let[name;$splitText[2]]
-$let[customId;$splitText[1]]
-$textSplit[$interactionData[customId];_]
+  $let[name;$splitText[2]]
+  $let[customId;$splitText[1]]
+  $textSplit[$interactionData[customId];_]
   `
 }]
