@@ -34,6 +34,7 @@ a === null ? " — No Parameters Found." : a === undefined ? " — Usage Not Fou
   prototype: 'button',
   code: `
   $interactionReply[\`\`\`js\\n$djsEval[client.functionManager.cache.get("$replaceText[$get[name];$;]").code.toString();yes]\\n\`\`\`;;;;;yes]
+  
   $onlyIf[$get[customId]==source;]
 
   $let[name;$splitText[2]]
