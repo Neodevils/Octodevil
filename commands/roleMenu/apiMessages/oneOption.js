@@ -8,9 +8,9 @@ $apiMessage[$if[$slashOption[channel]==;$channelID;$if[$channelType[$if[$slashOp
 {description:$slashOption[description] }
 {color:$if[$slashOption[color]==;BLACK;$if[$isValidHex[$slashOption[color]]==true;$slashOption[color];BLACK]]}{image:$if[$interactionData[options.resolved.attachments.get("$slashOption[image]")?.url]==undefined;;$interactionData[options.resolved.attachments.get("$slashOption[image]")?.url]]}{thumbnail:$if[$interactionData[options.resolved.attachments.get("$slashOption[thumbnail]")?.url]==undefined;;$interactionData[options.resolved.attachments.get("$slashOption[thumbnail]")?.url]]}};
 {actionRow:
-{selectMenu:menuCustomId::1:1:false:{selectMenuOptions:$roleName[$findRole[$splitText[1]]]:$findRole[$splitText[1]]:$splitText[2]:false:$nonEscape[$if[$isCustomEmoji[$nonEscape[$customEmoji[$advancedTextSplit[$arrayAt[emoji;1];:;2]]]]==false;$nonEscape[$customEmoji[git_commit]];$if[$arrayAt[emoji;1]==;$nonEscape[$customEmoji[git_commit]];$nonEscape[$customEmoji[$advancedTextSplit[$arrayAt[emoji;1];:;2]]]]]]}}}]
+{selectMenu:menuCustomId::1:1:false:{selectMenuOptions:$roleName[$findRole[$splitText[1]]]:$findRole[$splitText[1]]:$splitText[2]:false:$nonEscape[$if[$isCustomEmoji[$nonEscape[$customEmoji[$advancedTextSplit[$arrayAt[emoji;1];:;2]]]]==false;$nonEscape[$customEmoji[2xz]];$if[$arrayAt[emoji;1]==;$nonEscape[$customEmoji[2xz]];$nonEscape[$customEmoji[$advancedTextSplit[$arrayAt[emoji;1];:;2]]]]]]}}}]
 
-$interactionReply[$customEmoji[git_verified];;;;;yes] 
+$interactionReply[✅;;;;;yes] 
 
 $onlyIf[$charCount[$splitText[2]]<30;
 {"content":"Option description reached max character. \`the limit is 30 characters.\`",
