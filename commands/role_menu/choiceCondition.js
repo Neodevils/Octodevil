@@ -13,6 +13,8 @@ module.exports = {
 
   $if[$slashOption[amount]==fiveRole;{execute:fiveRoleOption}]
 
+	$onlyForIds[$botOwnerID;{"content": "Not avaliable at this moment.", "ephemeral": true, "options": {"interaction": true}}]
+
   $onlyIf[$interactionData[options._subcommand]==menu;]
   `
 }

@@ -9,17 +9,17 @@ module.exports = ({
     {thumbnail:$if[$interactionData[options.resolved.attachments.get("$slashOption[thumbnail]")?.url]==undefined;;$interactionData[options.resolved.attachments.get("$slashOption[thumbnail]")?.url]]}
   };{actionRow:
     {selectMenu:menuCustomId::1:5:false:
-      {selectMenuOptions:$roleName[$findRole[$splitText[1]]]:$findRole[$splitText[1]]:$splitText[2]:false:$nonEscape[$if[$isCustomEmoji[$nonEscape[$customEmoji[$advancedTextSplit[$arrayAt[emoji;1];:;2]]]]==false;$nonEscape[$customEmoji[2xz]];$if[$arrayAt[emoji;1]==;$nonEscape[$customEmoji[2xz]];$nonEscape[$customEmoji[$advancedTextSplit[$arrayAt[emoji;1];:;2]]]]]]}
-      {selectMenuOptions:$roleName[$findRole[$splitText[3]]]:$findRole[$splitText[3]]:$splitText[4]:false:$nonEscape[$if[$isCustomEmoji[$nonEscape[$customEmoji[$advancedTextSplit[$arrayAt[emoji;2];:;2]]]]==false;$nonEscape[$customEmoji[2xz]];$if[$arrayAt[emoji;2]==;$nonEscape[$customEmoji[2xz]];$nonEscape[$customEmoji[$advancedTextSplit[$arrayAt[emoji;2];:;2]]]]]]}
-      {selectMenuOptions:$roleName[$findRole[$splitText[5]]]:$findRole[$splitText[5]]:$splitText[6]:false:$nonEscape[$if[$isCustomEmoji[$nonEscape[$customEmoji[$advancedTextSplit[$arrayAt[emoji;3];:;2]]]]==false;$nonEscape[$customEmoji[2xz]];$if[$arrayAt[emoji;3]==;$nonEscape[$customEmoji[2xz]];$nonEscape[$customEmoji[$advancedTextSplit[$arrayAt[emoji;3];:;2]]]]]]}
-      {selectMenuOptions:$roleName[$findRole[$splitText[7]]]:$findRole[$splitText[7]]:$splitText[8]:false:$nonEscape[$if[$isCustomEmoji[$nonEscape[$customEmoji[$advancedTextSplit[$arrayAt[emoji;4];:;2]]]]==false;$nonEscape[$customEmoji[2xz]];$if[$arrayAt[emoji;4]==;$nonEscape[$customEmoji[2xz]];$nonEscape[$customEmoji[$advancedTextSplit[$arrayAt[emoji;4];:;2]]]]]]}
-      {selectMenuOptions:$roleName[$findRole[$splitText[9]]]:$findRole[$splitText[9]]:$splitText[10]:false:$nonEscape[$if[$isCustomEmoji[$nonEscape[$customEmoji[$advancedTextSplit[$arrayAt[emoji;5];:;2]]]]==false;$nonEscape[$customEmoji[2xz]];$if[$arrayAt[emoji;5]==;$nonEscape[$customEmoji[2xz]];$nonEscape[$customEmoji[$advancedTextSplit[$arrayAt[emoji;5];:;2]]]]]]}
+      {selectMenuOptions:$roleName[$findRole[$splitText[1]]]:$findRole[$splitText[1]]:$splitText[2]:false:$nonEscape[$if[$isCustomEmoji[$nonEscape[$customEmoji[$advancedTextSplit[$arrayAt[emoji;1];:;2]]]]==false;$nonEscape[$customEmoji[git_commit]];$if[$arrayAt[emoji;1]==;$nonEscape[$customEmoji[git_commit]];$nonEscape[$customEmoji[$advancedTextSplit[$arrayAt[emoji;1];:;2]]]]]]}
+      {selectMenuOptions:$roleName[$findRole[$splitText[3]]]:$findRole[$splitText[3]]:$splitText[4]:false:$nonEscape[$if[$isCustomEmoji[$nonEscape[$customEmoji[$advancedTextSplit[$arrayAt[emoji;2];:;2]]]]==false;$nonEscape[$customEmoji[git_commit]];$if[$arrayAt[emoji;2]==;$nonEscape[$customEmoji[git_commit]];$nonEscape[$customEmoji[$advancedTextSplit[$arrayAt[emoji;2];:;2]]]]]]}
+      {selectMenuOptions:$roleName[$findRole[$splitText[5]]]:$findRole[$splitText[5]]:$splitText[6]:false:$nonEscape[$if[$isCustomEmoji[$nonEscape[$customEmoji[$advancedTextSplit[$arrayAt[emoji;3];:;2]]]]==false;$nonEscape[$customEmoji[git_commit]];$if[$arrayAt[emoji;3]==;$nonEscape[$customEmoji[git_commit]];$nonEscape[$customEmoji[$advancedTextSplit[$arrayAt[emoji;3];:;2]]]]]]}
+      {selectMenuOptions:$roleName[$findRole[$splitText[7]]]:$findRole[$splitText[7]]:$splitText[8]:false:$nonEscape[$if[$isCustomEmoji[$nonEscape[$customEmoji[$advancedTextSplit[$arrayAt[emoji;4];:;2]]]]==false;$nonEscape[$customEmoji[git_commit]];$if[$arrayAt[emoji;4]==;$nonEscape[$customEmoji[git_commit]];$nonEscape[$customEmoji[$advancedTextSplit[$arrayAt[emoji;4];:;2]]]]]]}
+      {selectMenuOptions:$roleName[$findRole[$splitText[9]]]:$findRole[$splitText[9]]:$splitText[10]:false:$nonEscape[$if[$isCustomEmoji[$nonEscape[$customEmoji[$advancedTextSplit[$arrayAt[emoji;5];:;2]]]]==false;$nonEscape[$customEmoji[git_commit]];$if[$arrayAt[emoji;5]==;$nonEscape[$customEmoji[git_commit]];$nonEscape[$customEmoji[$advancedTextSplit[$arrayAt[emoji;5];:;2]]]]]]}
     }
   }]
 
   $wait[2s]
   
-  $interactionReply[$customEmoji[git_verified] Created Single Role Menu Succesful.;;;;;yes] 
+  $interactionReply[$customEmoji[git_verified] Created Penta Role Menu Succesful.;;;;;yes] 
   
   $onlyIf[$charCount[$splitText[2]]<30;
   {"content":"$nonEscape[$customEmoji[git_alert]] First option description reached max character. \\n> \`The limit is 30 characters.\`",
@@ -111,7 +111,7 @@ module.exports = ({
     "options":{"interaction":true}
   }]
   
-  lyIf[$charCount[$arrayFilter[roleIds;$arrayAt[roleIds;1];==]]<23;
+  $onlyIf[$charCount[$arrayFilter[roleIds;$arrayAt[roleIds;1];==]]<23;
   {"content":"$nonEscape[$customEmoji[git_alert]] [1] There is matching role ids.",
     "ephemeral":"true",
     "options":{"interaction":true}

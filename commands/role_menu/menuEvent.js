@@ -4,7 +4,7 @@ module.exports = [
     type: 'interaction',
     prototype: 'selectMenu',
     code: `
-    $interactionFollowUp[$get[answers]]
+    $interactionFollowUp[>>> $get[answers]]
 
     $let[answers;$arrayMap[values;awaitChanging;]]
 
@@ -21,10 +21,10 @@ module.exports = [
     $textTrim[
       $if[$hasRoles[$guildId;$interactionData[author.id];{value}]==true]
         $takeRole[$guildid;$interactionData[author.id];{value}]
-$customEmoji[git_removed] Removed <@&{value}>
+$customEmoji[git_removed] Removed <@&{value}>\n 
       $else
         $giveRole[$guildId;$interactionData[author.id];{value}]
-$customEmoji[git_added] Added <@&{value}>
+$customEmoji[git_added] Added <@&{value}>\n 
       $endif
     ]
     `
