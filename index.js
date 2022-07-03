@@ -15,6 +15,7 @@ const loader = new aoijs.LoadCommands(bot)
 loader.load(bot.cmd, "./commands/")
 
 //Music Class
+//Music Class
 const voice = new aoijs.Voice(bot, {
   cache: {
     cacheType: "Memory",
