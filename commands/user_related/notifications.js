@@ -2,16 +2,19 @@ module.exports = [
 	{
 		name:"ping", 
 		code: `
-		$addField[1;ʕ•ᴥ• ʕ  · ﻌ ·  ʔ •ᴥ•ʔ Pings;₍ $customEmoji[dp_star6] ₎ Want to get notification when we host an event, giveaway or an update? Roles are in below :3
->>> ﹒﹒﹒﹒$customEmoji[mns_sparkles]﹒﹒﹒﹒ 
-┊ \`1  \`<@&$getVar[extras]>
-┊ \`2  \`<@&$getVar[events]>
-┊ \`3  \`<@&$getVar[wikiUpload]>
-┊ \`4  \`<@&$getVar[announce]>
-┊ \`5  \`<@&$getVar[welcome]>]
-		$image[1; https://media.discordapp.net/attachments/861208192121569280/959363158663897088/minesa_divider.png]
-		$color[1; $getServerVar[brownHex]]
-		$addSelectMenu[1;pingMenu;✨︎ Pick notification roles ✨︎;1;1;no;extras:❀ question kf daily, poll, wear or tear.. and many minigames!:ping0:false:<:mns_1:959369153561628722>;events:✿ giveaways, events or challenges? sure, this role is yours:ping1:false:<:mns_2:959369202853101579>;wiki upload:❀ for whom wants to learn programming or discord bot:ping2:false:<:mns_3:959369250571690034>;announces:✿ get notifications for changelog or any important stuffs happening in here!:ping3:false:<:mns_4:959369293760430111>;welcome:❀ only for who has good personality better to claim this role UwU:ping4:false:<:mns_5:959369356758896661>]
+		$thumbnail[1;https://media.discordapp.net/attachments/861208192121569280/993257632339075243/Balksz122_20220608150208.png]
+		$title[1;ʕ•ᴥ• ʕ  · ﻌ ·  ʔ •ᴥ•ʔ Notifications]
+		$description[1;₍ $customEmoji[dp_star6] ₎ Feel free to get pinged 🤠
+>>> ﹒﹒﹒﹒$customEmoji[git_commit]﹒﹒﹒﹒ 
+┊ \` 1 \`<@&801618406817136651> 
+┊ \` 2 \`<@&993207116343021719> 
+┊ \` 3 \`<@&940881871624089600> 
+┊ \` 4 \`<@&836338427578286111> 
+┊ \` 5 \`<@&801618365231398912> 
+┊ \` 6 \`<@&801618241046315080>]
+		$image[1;https://media.discordapp.net/attachments/861208192121569280/993257257141817374/AddText_07-03-11.47.15.png]
+		$color[1;$getServerVar[gitHex]]
+		$addSelectMenu[1;menuCustomId;;1;6;no;announces:﹒For Server Notifications and Updates:801618406817136651:false:$nonEscape[$customEmoji[git_commit]];chat reviver:﹒Get Notification When We Need You:993207116343021719:false:$nonEscape[$customEmoji[git_commit]];dev announces:﹒Notification for Developers:940881871624089600:false:$nonEscape[$customEmoji[git_commit]];extras:﹒Get Notfications About QOTD, poll and would you rather~:836338427578286111:false:$nonEscape[$customEmoji[git_commit]];events:﹒Get Notifications When We Make Giveaway or Event:801618365231398912:false:$nonEscape[$customEmoji[git_commit]]; Welcomer:﹒Get Notifications When a New Member Joins:801618241046315080:false:$nonEscape[$customEmoji[git_commit]]]
 		`
 	}, 
 	{
