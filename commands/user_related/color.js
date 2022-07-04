@@ -2,18 +2,20 @@ module.exports = [
 	{
 		name:"color", 
 		code: `
-		$addField[1;ʕ•ᴥ• ʕ  · ﻌ ·  ʔ •ᴥ•ʔ Color;₍ $customEmoji[dp_star6] ₎ Pick any color that fits to you!
->>> ﹒﹒﹒﹒$customEmoji[mns_sparkles]﹒﹒﹒﹒ 
-┊ \`1  \`<@&$getVar[pyro]>
-┊ \`2  \`<@&$getVar[geo]>
-┊ \`3  \`<@&$getVar[anemo]>
-┊ \`4  \`<@&$getVar[dendro]>
-┊ \`5  \`<@&$getVar[cyro]>
-┊ \`6  \`<@&$getVar[hydro]>
-┊ \`7  \`<@&$getVar[electro]>]
-		$image[1; https://media.discordapp.net/attachments/861208192121569280/959363158663897088/minesa_divider.png]
-		$color[1; $getServerVar[brownHex]]
-		$addSelectMenu[1;colorMenu;✨︎ Pick your color ✨︎;1;1;no;pyro:❀ flame:color0:false:<:mns_1:959369153561628722>;geo:✿ soil:color1:false:<:mns_2:959369202853101579>;anemo:❀ wind:color2:false:<:mns_3:959369250571690034>;dendro:✿ nature:color3:false:<:mns_4:959369293760430111>;cyro:❀ ice:color4:false:<:mns_5:959369356758896661>;hydro:✿ water:color5:false:<:mns_6:959369408642416713>;electro:❀ lightning:color6:false:<:mns_7:959433929482444850>]
+		$thumbnail[1;https://media.discordapp.net/attachments/861208192121569280/993257632339075243/Balksz122_20220608150208.png]
+		$title[1;ʕ•ᴥ• ʕ  · ﻌ ·  ʔ •ᴥ•ʔ Colors;₍ $customEmoji[dp_star6] ₎ Pick any color that fits to you!
+>>> ﹒﹒﹒﹒$customEmoji[git_commit]﹒﹒﹒﹒ 
+┊ \` 1 \`<@&801612652920438784> 
+┊ \` 2 \`<@&993254456277868544> 
+┊ \` 3 \`<@&801613602440216617> 
+┊ \` 4 \`<@&801615185096867871> 
+┊ \` 5 \`<@&805430953958309908> 
+┊ \` 6 \`<@&805433136615653416> 
+┊ \` 7 \`<@&805435812786470932>
+┊ \` 8 \`<@&959044181190381609> ]
+		$image[1;https://media.discordapp.net/attachments/861208192121569280/993257257141817374/AddText_07-03-11.47.15.png]
+		$color[1;$getServerVar[gitHex]]
+		$addSelectMenu[1;menuCustomId;;1;1;no;୭ sunset:﹒Color:801612652920438784:false:$nonEscape[$customEmoji[git_commit]];୭ caramel:﹒Color:993254456277868544:false:$nonEscape[$customEmoji[git_commit]];୭ pineapple:﹒Color:801613602440216617:false:$nonEscape[$customEmoji[git_commit]];୭ bananya:﹒Color:801615185096867871:false:$nonEscape[$customEmoji[git_commit]];୭ palm:﹒Color:805430953958309908:false:$nonEscape[$customEmoji[git_commit]];୭ ocean:﹒Color:805433136615653416:false:$nonEscape[$customEmoji[git_commit]];୭ sandy:﹒Color:805435812786470932:false:$nonEscape[$customEmoji[git_commit]];୭ shelly:﹒Color:959044181190381609:false:$nonEscape[$customEmoji[git_commit]]]
 		`
 	}, 
 	{
