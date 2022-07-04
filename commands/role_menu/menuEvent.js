@@ -6,7 +6,8 @@ module.exports = [
     code: `
     $interactionFollowUp[>>> $get[answers]]
 
-    $let[answers;$arrayMap[values;awaitChanging;]]
+    $let[answers;$arrayMap[values;awaitChanging;
+   ]]
 
     $interactionDefer[yes]
 
