@@ -7,7 +7,7 @@ module.exports = [
     $interactionFollowUp[>>> $get[answers]]
 
     $let[answers;$arrayMap[values;awaitChanging;
-   ]]
+]]
 
     $interactionDefer[yes]
 
