@@ -11,26 +11,17 @@ module.exports = [
 			{color:$getVar[gitHex]}
 			{field:Sharing:>>> *send embed links & upload attachments*
         ៸៸	<@&963765637027598357>
-        ៸៸	$customEmoji[git_package] 3 G-Packs}
-			{field:ID Update:>>> *this one is for you, $username*
+        ៸៸	$customEmoji[git_package] 2 G-Packs}
+			{field:edit nick:>>> *this one is for you, $username*
         ៸៸	<@&928642084980793404>
-        ៸៸	$customEmoji[git_package] 15 G-Packs}
-			{field:Certificate:>>> *by-pass automod*
-        ៸៸	<@&987700992634138625>
-        ៸៸	$customEmoji[git_package] 18 G-Packs}
-			{field:Growth Pack:>>> *__Content__
-      • $customEmoji[git_ruby] 80.000 Rubies*
-        ៸៸	<@&895307653851512914>
-        ៸៸	$customEmoji[git_package] 20 G-Packs}
+        ៸៸	$customEmoji[git_package] 3 G-Packs}
 			{field:Freshman:>>> *Your custom role and will be yours forever.*
         ៸៸	<@&895308742642507817>
-        ៸៸	$customEmoji[git_package] 30 G-Packs}	
+        ៸៸	$customEmoji[git_package] 50 G-Packs}	
 		};{actionRow:
 			{selectMenu:perkMenu:・Choose wisely~:1:1:false:
 				{selectMenuOptions:・Attachment:perk0:Want to attach anything into any channels?:false:<:git_attachment:990940186730967051>}
 				{selectMenuOptions:・Id Card:perk1:For Updating your nickname:false:<:git_id:990935491710951435>}
-				{selectMenuOptions:・Certificate:perk2:Get access to bypass AutoMod & mentioning Neo:false:<:git_verified:990874889156186135>}
-				{selectMenuOptions:・Growth Pack:perk3:Get Rubies for a week:false:<:git_ruby:990892111207489586>}
 				{selectMenuOptions:・Freshman:perk4:A role, only for you.:false:<:git_tag:990726173510225980>}
 			}
 		}]
@@ -52,7 +43,7 @@ $interactionReply[>>> Claimed <@&963765637027598357>,
 	
 $onlyIf[$hasRoles[$guildID;$authorID;963765637027598357]==false;{"content":"You have the role already. Uh, what?","ephemeral": true, "options":{"interaction" : true}}]
 
-$onlyIf[$getGlobalUserVar[cube]>=3;{"content": "$nonEscape[Need to collect more $customEmoji[git_package] __G-Packs__ to buy this perk.]","ephemeral": true, "options":{"interaction" : true}}]
+$onlyIf[$getGlobalUserVar[cube]>=2;{"content": "$nonEscape[Need to collect more $customEmoji[git_package] __G-Packs__ to buy this perk.]","ephemeral": true, "options":{"interaction" : true}}]
 
 $onlyIf[$interactionData[values[0]]==perk0;]
 		`
@@ -73,51 +64,9 @@ $onlyIf[$interactionData[values[0]]==perk0;]
 	
     $onlyIf[$hasRoles[$guildID;$authorID;928642084980793404]==false;{"content":"NO! Uh... sorry. But, don't expect I'll also give you managenicknames permission. Hmm...","ephemeral": true, "options":{"interaction" : true}}]
 
-    $onlyIf[$getGlobalUserVar[cube]>=15;{"content": "$nonEscape[Need to collect more $customEmoji[git_package] __G-Packs__ to buy this perk.]","ephemeral": true, "options":{"interaction" : true}}]
+    $onlyIf[$getGlobalUserVar[cube]>=3;{"content": "$nonEscape[Need to collect more $customEmoji[git_package] __G-Packs__ to buy this perk.]","ephemeral": true, "options":{"interaction" : true}}]
 
     $onlyIf[$interactionData[values[0]]==perk1;]
-		`
-	},
-	{
-// Bypassing AutoMod
-		name: "perkMenu",
-		type: 'interaction', 
-		prototype:'selectMenu', 
-		code: `
-    $giveRole[$guildID;$authorID;987700992634138625]
-
-    $setGlobalUserVar[cube;$sub[$getGlobalUserVar[cube];18]]
-
-    $interactionReply[>>> Claimed <@&987700992634138625>,
-
-||Now you can __say b-baka words!__||;;;;;yes]
-	
-    $onlyIf[$hasRoles[$guildID;$authorID;987700992634138625]==false;{"content":"Someone wants to get punishment for abusing, i guess?","ephemeral": true, "options":{"interaction" : true}}]
-
-    $onlyIf[$getGlobalUserVar[cube]>=18;{"content": "$nonEscape[Need to collect more $customEmoji[git_package] __G-Packs__ to buy this perk.]","ephemeral": true, "options":{"interaction" : true}}]
-
-    $onlyIf[$interactionData[values[0]]==perk2;]
-		`
-	},
-	{
-// Supply Perk
-	  name: "perkMenu",
-	  type: 'interaction',
-	  prototype: 'selectMenu',
-	  code: `
-    $giveRole[$guildID;$authorID;895307653851512914]
-
-    $setGlobalUserVar[cube;$sub[$getGlobalUserVar[cube];20]]
-
-    $interactionReply[>>> Claimed <@&895307653851512914>,
-
-||From now, you will be getting __12,000 AKI Tokens__ for 7 days!||;;;;;yes]
-	
-    $onlyIf[$hasRoles[$guildID;$authorID;895307653851512914]==false;{"content":"Sorry but it is only for once so uh...","ephemeral": true, "options":{"interaction" : true}}]
-
-    $onlyIf[$getGlobalUserVar[cube]>=20;{"content": "$nonEscape[Need to collect more $customEmoji[git_package] __G-Packs__ to buy this perk.]","ephemeral": true, "options":{"interaction" : true}}]
-
-    $onlyIf[$interactionData[values[0]]==perk3;]
 		`
 	},
  	{
@@ -136,7 +85,7 @@ $interactionReply[>>> Claimed <@&895308742642507817>,
 	
 $onlyIf[$hasRoles[$guildID;$authorID;895308742642507817]==false;{"content":"You're so rich, but there's something else you can't buy. Like this one. 🤠 *Cause you already did so.*","ephemeral": true, "options":{"interaction" : true}}]
 
-$onlyIf[$getGlobalUserVar[cube]>=30;{"content": "$nonEscape[Need to collect more $customEmoji[git_package] __G-Packs__ to buy this perk.]","ephemeral": true, "options":{"interaction" : true}}]
+$onlyIf[$getGlobalUserVar[cube]>=50;{"content": "$nonEscape[Need to collect more $customEmoji[git_package] __G-Packs__ to buy this perk.]","ephemeral": true, "options":{"interaction" : true}}]
 
 $onlyIf[$interactionData[values[0]]==perk4;]
 		`
