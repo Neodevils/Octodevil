@@ -1,22 +1,38 @@
-module.exports = {
-  name: "poll",
-  type: 'interaction',
-  prototype: 'slash',
-  code: `
-  $sendMessage[{
-    "content": "$customEmoji[git_table] *$username created a poll.*",
-    "embeds": "{newEmbed:{title:$slashOption[title]}{description:>>> • $slashOption[option_1]\\n\\n• $slashOption[option_2]\\n\\n$if[$slashOption[option_3]!=;• $slashOption[option_3]]\\n\\n$if[$slashOption[option_4]!=;• $slashOption[option_4]]\\n\\n$if[$slashOption[option_5]!=;• $slashOption[option_5]]}{color:$getVar[invisibleHex]}{thumbnail:}}",
-    "fetchReply": true, 
-    "options": {
-      "reactions": [
-        "1️⃣",
-        "2️⃣",
-        "3️⃣",
-        "4️⃣",
-        "5️⃣"
-        ],
-      "interaction": true
-    }
-  }]
+module.exports = [
+  {
+    name: "poll",
+    type: 'interaction',
+    prototype: 'slash',
+    code: `
+    $interactionModal[Creating a poll ;pollModal;
+      {actionRow:
+        {textInput:What is the subject of the poll?:1:titlePollInput:yes: Please describe something about your poll.:5:80}
+      }
+      {actionRow:
+        {textInput:Please type first option below:1:firstPollInput:yes: Waiting you to text first option...:1:120}
+      }
+      {actionRow:
+        {textInput:Also type second option below:secondPollInput:yes:Also waiting you to text second option...:1:120}
+      }
+    ]
+    `
+  },
+  {
+    name: "pollModal",
+    type: 'interaction',
+    prototype: 'modal',
+    code: `
+    $createThread[$channelID;➜ Comment Thread — by $userTag;MAX;public;$get[id]]
+  
+    $let[id;$sendMessage[{
+      "content": "$customEmoji[git_table] *$username created a poll.*",
+      "embeds": "{newEmbed:{title:$textInputValue[titlePollInput]}{description:>>> • $textInputValue[firstPollInput]\\n\\n• $textInputValue[secondPollInput]}{color:$getVar[invisibleHex]}{thumbnail:}{footer:You can discuss in comment thread 🙌🏻}}",
+      "fetchReply": true, 
+      "options": {
+        "reactions" : ["954552276717043812","954552202654019644"],
+        "interaction" : true
+      }
+    };yes]]
   `
-} 
+  } 
+]
