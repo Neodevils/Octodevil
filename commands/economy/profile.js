@@ -3,7 +3,7 @@ module.exports = {
   type: 'interaction',
   prototype: 'slash',
   code: `
-	$interactionEdit[;
+	$interactionEdit[<@$authorID>;
 	{newEmbed:
 		{author:$username[$replaceText[$interactionData[options.data[0].value];undefined;$authorID]]/readme.md:https\\://media.discordapp.net/attachments/861208192121569280/980187260366516285/1653765241741.png}
 		{thumbnail:$userAvatar[$replaceText[$interactionData[options.data[0].value];undefined;$authorID]]}
