@@ -1,7 +1,8 @@
 module.exports = {
   name: "2048",
   code: `
-  $djsEval[const { TwoZeroFourEight } = require("leaf-utils");
+  $djsEval[( async () => { 
+const { TwoZeroFourEight } = require("leaf-utils");
 
 await TwoZeroFourEight({
     message: message,
@@ -34,6 +35,7 @@ await TwoZeroFourEight({
     winMessage: "GG, You win",
     loseMessage: "You lose",
     authorOnly: "Only <@{{author}}> can use this button!",
-});yes]
+})
+})();yes]
   `
 }
