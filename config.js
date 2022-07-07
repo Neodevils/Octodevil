@@ -2,7 +2,7 @@ module.exports = {
   Bot: {
     token: process.env.TOKEN,
     prefix: "!",
-		intents: ["GUILDS", "GUILD_VOICE_STATES", "GUILD_MESSAGES", "GUILD_MEMBERS"],
+    intents: ["GUILDS", "GUILD_VOICE_STATES", "GUILD_MESSAGES", "GUILD_MEMBERS"],
     database: {
       db: require('aoi.mongo'),
       type: "aoi.mongo",
