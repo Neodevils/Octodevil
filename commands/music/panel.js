@@ -1,12 +1,17 @@
 module.exports = [
 	{
 		$if: 'v4',
-		name: "music",
+		name: "panel",
 		type: 'interaction',
 		prototype: 'slash',
 		code: `
     $if[$voiceID[$authorID]==]
     $interactionReply[$customEmoji[git_alert] May you join to a voice channel?;;;;;yes]
+    $elseif[$queueLength==0] 
+
+    $interactionReply[$customEmoji[git_alert] Nothing is playing right now?;;;;;yes] 
+  
+    $endelseif
 
     $elseif[$voiceID[$clientID]==]
     $interactionEdit[$customEmoji[git_pending] You can use \`/play\` slash command to play a track.;;;;;yes]
@@ -21,7 +26,7 @@ module.exports = [
     $joinVC
 
     $wait[2s]
-    $interactionReply[$customEmoji[git_verified] Joining to voice channel...;;;;;yes]
+    $interactionReply[$customEmoji[git_verified] Joining to voice channel...]
 
     $endelseif
 

@@ -25,8 +25,8 @@ module.exports = [
     $createThread[$channelID;➜ Comment Thread — by $username;MAX;public;$get[id]]
   
     $let[id;$sendMessage[{
-      "content": "$nonEscape[$customEmoji[git_table]] *__$username__ created a poll. Please keep comment section sfw \`🤗\`*",
-      "embeds": "{newEmbed:{title:$textInputValue[titlePollInput]}{description:>>> ・ $textInputValue[firstPollInput]\\n\\n・$textInputValue[secondPollInput]}{color:$getVar[invisibleHex]}{thumbnail:https://media.discordapp.net/attachments/861208192121569280/994173583456731186/code-review.png}{footer:You can discuss in comment thread 🙌🏻}}",
+      "content": "$nonEscape[$customEmoji[git_table]] ***Please keep the comment section safe to work, if you're a cool person*** $randomText[🤠;😋;🙃;🤭;😳;😎]",
+      "embeds": "{newEmbed:{title:$textInputValue[titlePollInput]}{description:>>> ・$textInputValue[firstPollInput]\\n\\n・$textInputValue[secondPollInput]}{color:$getVar[invisibleHex]}{thumbnail:https://media.discordapp.net/attachments/861208192121569280/994173583456731186/code-review.png}{footer:You can discuss in comment thread 🙌🏻}}",
       "fetchReply": true, 
       "options": {
         "reactions" : ["954552276717043812","954552202654019644"],
