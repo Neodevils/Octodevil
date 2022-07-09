@@ -124,7 +124,7 @@ module.exports = [
 		}]
 
 		$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];{
-			"content": "$customEmoji[git_alert] Uhm, you can use this after them done~",
+			"content": "$nonEscape[$customEmoji[git_alert]] You can't use this button in this context.",
 			"ephemeral": true,
 			"options": {
 				"interaction": true
@@ -161,7 +161,7 @@ module.exports = [
 		}]
 
 		$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];{
-			"content": "$customEmoji[git_alert] Uhm, you can use this after them done~",
+			"content": "$nonEscape[$customEmoji[git_alert]] You can't use this button in this context.",
 			"ephemeral": true,
 			"options": {
 				"interaction": true
@@ -192,7 +192,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==previousTrack;]
 		}]
 
 		$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];{
-			"content": "$customEmoji[git_alert] Uhm, you can use this after them done~",
+			"content": "$nonEscape[$customEmoji[git_alert]] You can't use this button in this context.",
 			"ephemeral": true,
 			"options": {
 				"interaction": true
@@ -227,7 +227,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==previousTrack;]
 		}]
 
 		$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];{
-			"content": "$customEmoji[git_alert] Uhm, you can use this after them done~",
+			"content": "$nonEscape[$customEmoji[git_alert]] You can't use this button in this context.",
 			"ephemeral": true,
 			"options": {
 				"interaction": true
@@ -258,7 +258,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==previousTrack;]
 		}]
 
 		$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];{
-			"content": "$customEmoji[git_alert] Uhm, you can use this after them done~",
+			"content": "$nonEscape[$customEmoji[git_alert]] You can't use this button in this context.",
 			"ephemeral": true,
 			"options": {
 				"interaction": true
@@ -305,7 +305,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==previousTrack;]
 		}]
 
 		$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];{
-			"content": "$customEmoji[git_alert] Uhm, you can use this after them done~",
+			"content": "$nonEscape[$customEmoji[git_alert]] You can't use this button in this context.",
 			"ephemeral": true,
 			"options": {
 				"interaction": true
@@ -350,7 +350,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==previousTrack;]
 		}]
 
 		$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];{
-			"content": "$customEmoji[git_alert] Uhm, you can use this after them done~",
+			"content": "$nonEscape[$customEmoji[git_alert]] You can't use this button in this context.",
 			"ephemeral": true,
 			"options": {
 				"interaction": true
@@ -387,7 +387,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==previousTrack;]
 		}]
 
 		$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];{
-			"content": "$customEmoji[git_alert] Uhm, you can use this after them done~",
+			"content": "$nonEscape[$customEmoji[git_alert]] You can't use this button in this context.",
 			"ephemeral": true,
 			"options": {
 				"interaction": true
@@ -424,7 +424,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==previousTrack;]
 		}]
 
 		$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];{
-			"content": "$customEmoji[git_alert] Uhm, you can use this after them done~",
+			"content": "$nonEscape[$customEmoji[git_alert]] You can't use this button in this context.",
 			"ephemeral": true,
 			"options": {
 				"interaction": true
@@ -453,7 +453,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==previousTrack;]
 		}]
 
 		$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];{
-			"content": "$customEmoji[git_alert] Uhm, you can use this after them done~",
+			"content": "$nonEscape[$customEmoji[git_alert]] You can't use this button in this context.",
 			"ephemeral": true,
 			"options": {
 				"interaction": true
@@ -484,7 +484,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==previousTrack;]
 		}]
 
 		$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];{
-			"content": "$customEmoji[git_alert] Uhm, you can use this after them done~",
+			"content": "$nonEscape[$customEmoji[git_alert]] You can't use this button in this context.",
 			"ephemeral": true,
 			"options": {
 				"interaction": true
