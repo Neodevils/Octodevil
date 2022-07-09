@@ -81,7 +81,7 @@ module.exports = [
 			}
     ]
 
-    $onlyif[$queueLength!=0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
+    $onlyif[$djseval[client.voiceManager.manager.players.get(guild.id)?.queue.list.length;yes]==0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
 			"content": "$nonEscape[$customEmoji[git_alert]] Nothing is playing right now.",
 			"ephemeral": true, 
 			"options": {
@@ -115,7 +115,7 @@ module.exports = [
 
 		$loopMode[song]
 
-		$onlyif[$queueLength!=0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
+		$onlyif[$djseval[client.voiceManager.manager.players.get(guild.id)?.queue.list.length;yes]==0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
 			"content": "$nonEscape[$customEmoji[git_alert]] Nothing is playing right now.",
 			"ephemeral": true, 
 			"options": {
@@ -142,7 +142,7 @@ module.exports = [
 
 		$wait[10s]
 
-		$interactionReply[> $customEmoji[git_verified] **__$playPrevious__** :3]
+		$interactionReply[> $customEmoji[git_verified] **__$playPrevious__**]
 
 		$onlyIf[$djseval[client.voiceManager.manager.players.get(guild.id).queue.previous!==null;yes]==true;{
 			"content": "$nonEscape[$customEmoji[git_verified]] No previous track found.",
@@ -183,7 +183,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==previousTrack;]
 
 		$leaveVC
 
-		$onlyif[$queueLength!=0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
+		$onlyif[$djseval[client.voiceManager.manager.players.get(guild.id)?.queue.list.length;yes]==0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
 			"content": "$nonEscape[$customEmoji[git_alert]] Nothing is playing right now.",
 			"ephemeral": true, 
 			"options": {
@@ -210,7 +210,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==previousTrack;]
 
 		$wait[10s]
 
-		$interactionEdit[> $customEmoji[git_verified] skipped the song, now playing __**$songInfo[title]**__ :3]
+		$interactionEdit[> $customEmoji[git_verified] skipped the song, now playing __**$songInfo[title]**__]
 
 		$wait[1s]
 
@@ -218,7 +218,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==previousTrack;]
 
 		$interactionReply[> $customEmoji[git_verified] skipping...]
 
-		$onlyif[$queueLength>=0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
+		$onlyif[$djseval[client.voiceManager.manager.players.get(guild.id)?.queue.list.length;yes]>0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
 			"content": "$nonEscape[$customEmoji[git_alert]] Nothing is playing right now;\\n>>> ・Check queue, if there no song left in the queue.\\n・Might be not connected to voice chat.",
 			"ephemeral": true, 
 			"options": {
@@ -249,7 +249,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==previousTrack;]
 
 		$loopMode[queue]
 
-    $onlyif[$queueLength!=0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
+    $onlyif[$djseval[client.voiceManager.manager.players.get(guild.id)?.queue.list.length;yes]==0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
 			"content": "$nonEscape[$customEmoji[git_alert]] Nothing is playing right now.",
 			"ephemeral": true, 
 			"options": {
@@ -296,7 +296,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==previousTrack;]
 			}
     ]
 
-		$onlyif[$queueLength!=0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
+		$onlyif[$djseval[client.voiceManager.manager.players.get(guild.id)?.queue.list.length;yes]==0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
 			"content": "$nonEscape[$customEmoji[git_alert]] Nothing is playing right now.",
 			"ephemeral": true, 
 			"options": {
@@ -341,7 +341,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==previousTrack;]
 
 		$interactionDefer
 
-		$onlyif[$queueLength!=0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
+		$onlyif[$djseval[client.voiceManager.manager.players.get(guild.id)?.queue.list.length;yes]==0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
 			"content": "$nonEscape[$customEmoji[git_alert]] Nothing is playing right now.",
 			"ephemeral": true, 
 			"options": {
@@ -378,7 +378,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==previousTrack;]
 
 		$interactionDefer
 
-		$onlyif[$queueLength!=0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
+		$onlyif[$djseval[client.voiceManager.manager.players.get(guild.id)?.queue.list.length;yes]==0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
 			"content": "$nonEscape[$customEmoji[git_alert]] Nothing is playing right now.",
 			"ephemeral": true, 
 			"options": {
@@ -408,14 +408,9 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==previousTrack;]
 				{field:𓂃⸼$customEmoji[git_tag] next songs ᯌ:>>> $queue[1;5;**\`{position} — \`** __{title}__ ៸៸ **﹫{user.tag}** ꮺ ~~[track]({url})~~]}
 				{color:$getVar[gitHex]}
 				{thumbnail:$authorAvatar}
-			}
-			;
-			;
-			;
-			;yes
-		]
+			};;;;yes]
 
-		$onlyif[$queueLength!=0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
+		$onlyif[$djseval[client.voiceManager.manager.players.get(guild.id)?.queue.list.length;yes]==0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
 			"content": "$nonEscape[$customEmoji[git_alert]] Nothing is playing right now.",
 			"ephemeral": true, 
 			"options": {
@@ -444,7 +439,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==previousTrack;]
 
 		$interactionReply[> $customEmoji[git_verified] enabled __**bass**__.]
 
-		$onlyif[$queueLength!=0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
+		$onlyif[$djseval[client.voiceManager.manager.players.get(guild.id)?.queue.list.length;yes]==0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
 			"content": "$nonEscape[$customEmoji[git_alert]] Nothing is playing right now.",
 			"ephemeral": true, 
 			"options": {
@@ -475,7 +470,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==previousTrack;]
 
 		$let[b;$addFilter[{"apulsator": "hz=0.125","stereotools": "","stereowiden" :"","aecho" :"0.8:0.8:50:0.5"}]]
 
-		$onlyif[$queueLength!=0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
+		$onlyif[$djseval[client.voiceManager.manager.players.get(guild.id)?.queue.list.length;yes]==0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
 			"content": "$nonEscape[$customEmoji[git_alert]] Nothing is playing right now.",
 			"ephemeral": true, 
 			"options": {
