@@ -8,7 +8,7 @@ module.exports = [
     $interactionFollowUp[
 			;{newEmbed:
 				{description:$customEmoji[git_play] **“$get[song]”** to queue *!*}
-				{image:$songInfo[thumbnail;$slashOption[search]]}
+				{image:$songInfo[thumbnail;$get[song]]}
 				{color:$getVar[gitHex]}
 				{footer:$randomText[enjoy~;music heals!;feel the music!]:$userAvatar[$clientID]}
 			}

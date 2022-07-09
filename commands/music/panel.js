@@ -7,9 +7,9 @@ module.exports = [
 		code: `
     $if[$voiceID[$authorID]==]
     $interactionReply[$customEmoji[git_alert] May you join to a voice channel?;;;;;yes]
-    $elseif[$queueLength==0] 
 
-    $interactionReply[$customEmoji[git_alert] Nothing is playing right now?;;;;;yes] 
+    $elseif[$queueLength==0] 
+    $interactionReply[$customEmoji[git_alert] Nothing is playing right now?;;;;;yes] 
   
     $endelseif
 
@@ -82,13 +82,14 @@ module.exports = [
 			}
     ]
 
-    $onlyif[$queueLength!=0;{
+    $onlyif[$queueLength!=0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
 			"content": "$nonEscape[$customEmoji[git_alert]] Nothing is playing right now.",
 			"ephemeral": true, 
 			"options": {
 				"interaction": true
 			}
 		}]
+
 
 		$onlyIf[$interactionData[customId]==musicMenu_$interactionData[author.id];]
 
@@ -115,7 +116,7 @@ module.exports = [
 
 		$loopMode[song]
 
-		$onlyif[$queueLength!=0;{
+		$onlyif[$queueLength!=0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
 			"content": "$nonEscape[$customEmoji[git_alert]] Nothing is playing right now.",
 			"ephemeral": true, 
 			"options": {
@@ -152,6 +153,14 @@ module.exports = [
 			}
 		}]
 
+    $onlyif[$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
+			"content": "$nonEscape[$customEmoji[git_alert]] Didn't connect to a voice chat.",
+			"ephemeral": true, 
+			"options": {
+				"interaction": true
+			}
+		}]
+
 		$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];{
 			"content": "$customEmoji[git_alert] Uhm, you can use this after them done~",
 			"ephemeral": true,
@@ -175,7 +184,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==previousTrack;]
 
 		$leaveVC
 
-		$onlyif[$queueLength!=0;{
+		$onlyif[$queueLength!=0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
 			"content": "$nonEscape[$customEmoji[git_alert]] Nothing is playing right now.",
 			"ephemeral": true, 
 			"options": {
@@ -210,8 +219,8 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==previousTrack;]
 
 		$interactionReply[> $customEmoji[git_verified] skipping...]
 
-		$onlyif[$queueLength!=0;{
-			"content": "$nonEscape[$customEmoji[git_alert]] Nothing is playing right now.",
+		$onlyif[$queueLength>=0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
+			"content": "$nonEscape[$customEmoji[git_alert]] Nothing is playing right now;\\n>>> ・Check queue, if there no song left in the queue.\\n・Might be not connected to voice chat.",
 			"ephemeral": true, 
 			"options": {
 				"interaction": true
@@ -241,7 +250,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==previousTrack;]
 
 		$loopMode[queue]
 
-		$onlyif[$queueLength!=0;{
+    $onlyif[$queueLength!=0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
 			"content": "$nonEscape[$customEmoji[git_alert]] Nothing is playing right now.",
 			"ephemeral": true, 
 			"options": {
@@ -289,7 +298,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==previousTrack;]
 			}
     ]
 
-		$onlyif[$queueLength!=0;{
+		$onlyif[$queueLength!=0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
 			"content": "$nonEscape[$customEmoji[git_alert]] Nothing is playing right now.",
 			"ephemeral": true, 
 			"options": {
@@ -334,7 +343,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==previousTrack;]
 
 		$interactionDefer
 
-		$onlyif[$queueLength!=0;{
+		$onlyif[$queueLength!=0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
 			"content": "$nonEscape[$customEmoji[git_alert]] Nothing is playing right now.",
 			"ephemeral": true, 
 			"options": {
@@ -371,7 +380,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==previousTrack;]
 
 		$interactionDefer
 
-		$onlyif[$queueLength!=0;{
+		$onlyif[$queueLength!=0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
 			"content": "$nonEscape[$customEmoji[git_alert]] Nothing is playing right now.",
 			"ephemeral": true, 
 			"options": {
@@ -408,7 +417,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==previousTrack;]
 			;yes
 		]
 
-		$onlyif[$queueLength!=0;{
+		$onlyif[$queueLength!=0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
 			"content": "$nonEscape[$customEmoji[git_alert]] Nothing is playing right now.",
 			"ephemeral": true, 
 			"options": {
@@ -437,7 +446,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==previousTrack;]
 
 		$interactionReply[> $customEmoji[git_verified] enabled __**bass**__.]
 
-		$onlyif[$queueLength!=0;{
+		$onlyif[$queueLength!=0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
 			"content": "$nonEscape[$customEmoji[git_alert]] Nothing is playing right now.",
 			"ephemeral": true, 
 			"options": {
@@ -468,7 +477,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==previousTrack;]
 
 		$let[b;$addFilter[{"apulsator": "hz=0.125","stereotools": "","stereowiden" :"","aecho" :"0.8:0.8:50:0.5"}]]
 
-		$onlyif[$queueLength!=0;{
+		$onlyif[$queueLength!=0||$voiceID[$authorID]!=||$voiceID[$clientID]!=;{
 			"content": "$nonEscape[$customEmoji[git_alert]] Nothing is playing right now.",
 			"ephemeral": true, 
 			"options": {
