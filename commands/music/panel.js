@@ -37,7 +37,6 @@ module.exports = [
         {field:$customEmoji[git_info] currently playing:$customEmoji[git_commit] $songInfo[title]}
         {field:$customEmoji[git_mention] publisher:$customEmoji[git_commit] $songInfo[author]}
         {field:$customEmoji[git_timestamp] duration:$customEmoji[git_commit] *$humanizeMS[$getCurrentDuration]* — $humanizeMS[$songInfo[duration]]}
-        {field:$customEmoji[git_eye] watched:$customEmoji[git_commit] $numberSeparator[$songInfo[views]] views}
         {field:$customEmoji[git_link] url:$customEmoji[git_commit] [Tap here to go to the link!]($songInfo[url])}
         {image:https://media.discordapp.net/attachments/774748031589023764/777379789224935434/image0.gif}
         {thumbnail:$authorAvatar}
@@ -63,7 +62,6 @@ module.exports = [
         {field:$customEmoji[git_info] currently playing:$customEmoji[git_commit] $songInfo[title]}
         {field:$customEmoji[git_mention] publisher:$customEmoji[git_commit] $songInfo[author]}
         {field:$customEmoji[git_timestamp] duration:$customEmoji[git_commit] *$humanizeMS[$getCurrentDuration]* — $humanizeMS[$songInfo[duration]]}
-        {field:$customEmoji[git_eye] watched:$customEmoji[git_commit] $numberSeparator[$songInfo[views]] views}
         {field:$customEmoji[git_link] url:$customEmoji[git_commit] [Tap here to go to the link!]($songInfo[url])}
         {image:https://media.discordapp.net/attachments/774748031589023764/777379789224935434/image0.gif}
         {thumbnail:$authorAvatar}
@@ -285,7 +283,6 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==previousTrack;]
         {field:$customEmoji[git_info] currently playing:$customEmoji[git_commit] $songInfo[title]}
         {field:$customEmoji[git_mention] publisher:$customEmoji[git_commit] $songInfo[author]}
         {field:$customEmoji[git_timestamp] duration:$customEmoji[git_commit] *$humanizeMS[$getCurrentDuration]* — $humanizeMS[$songInfo[duration]]}
-        {field:$customEmoji[git_eye] watched:$customEmoji[git_commit] $numberSeparator[$songInfo[views]] views}
         {field:$customEmoji[git_link] url:$customEmoji[git_commit] [Tap here to go to the link!]($songInfo[url])}
         {image:https://media.discordapp.net/attachments/774748031589023764/777379789224935434/image0.gif}
         {thumbnail:$authorAvatar}

@@ -33,19 +33,19 @@ module.exports = [
 		type: 'interaction', 
 		prototype:'selectMenu', 
 		code: `
-$giveRole[$guildID;$authorID;963765637027598357]
+		$giveRole[$guildID;$authorID;963765637027598357]
 
-$setGlobalUserVar[cube;$sub[$getGlobalUserVar[cube];3]]
+		$setGlobalUserVar[cube;$sub[$getGlobalUserVar[cube];3]]
 
-$interactionReply[>>> Claimed <@&963765637027598357>,
+		$interactionReply[>>> Claimed <@&963765637027598357>,
 
-||Now you have __external emojis & embed links__ permission!||;;;;;yes]
-	
-$onlyIf[$hasRoles[$guildID;$authorID;963765637027598357]==false;{"content":"You have the role already. Uh, what?","ephemeral": true, "options":{"interaction" : true}}]
+		||Now you have __external emojis & embed links__ permission!||;;;;;yes]
 
-$onlyIf[$getGlobalUserVar[cube]>=2;{"content": "$nonEscape[Need to collect more $customEmoji[git_package] __G-Packs__ to buy this perk.]","ephemeral": true, "options":{"interaction" : true}}]
+		$onlyIf[$getGlobalUserVar[cube]>=2;{"content": "$nonEscape[Need to collect more $customEmoji[git_package] __G-Packs__ to buy this perk.]","ephemeral": true, "options":{"interaction" : true}}]
 
-$onlyIf[$interactionData[values[0]]==perk0;]
+		$onlyIf[$hasRoles[$guildID;$authorID;963765637027598357]==false;{"content":"You have the role already. Uh, what?","ephemeral": true, "options":{"interaction" : true}}]
+
+		$onlyIf[$interactionData[values[0]]==perk0;]
 		`
 	},
 	{
@@ -61,10 +61,10 @@ $onlyIf[$interactionData[values[0]]==perk0;]
     $interactionReply[>>> Claimed <@&928642084980793404>,
 
 ||Now you have permission to change __change your nickname!__||;;;;;yes]
-	
-    $onlyIf[$hasRoles[$guildID;$authorID;928642084980793404]==false;{"content":"NO! Uh... sorry. But, don't expect I'll also give you managenicknames permission. Hmm...","ephemeral": true, "options":{"interaction" : true}}]
 
     $onlyIf[$getGlobalUserVar[cube]>=3;{"content": "$nonEscape[Need to collect more $customEmoji[git_package] __G-Packs__ to buy this perk.]","ephemeral": true, "options":{"interaction" : true}}]
+
+		$onlyIf[$hasRoles[$guildID;$authorID;928642084980793404]==false;{"content":"NO! Uh... sorry. But, don't expect I'll also give you managenicknames permission. Hmm...","ephemeral": true, "options":{"interaction" : true}}]
 
     $onlyIf[$interactionData[values[0]]==perk1;]
 		`
@@ -75,19 +75,19 @@ $onlyIf[$interactionData[values[0]]==perk0;]
 		type: 'interaction', 
 		prototype:'selectMenu', 
 		code: `
-$giveRole[$guildID;$authorID;895308742642507817]
+		$giveRole[$guildID;$authorID;895308742642507817]
 
-$setGlobalUserVar[cube;$sub[$getGlobalUserVar[cube];30]]
+		$setGlobalUserVar[cube;$sub[$getGlobalUserVar[cube];30]]
 
-$interactionReply[>>> Claimed <@&895308742642507817>,
+		$interactionReply[>>> Claimed <@&895308742642507817>,
 
-||Now you can have your own role, __your own color... your own role name and possibly icon...__ Mmmm, also you got Saku's nudez 😳||;;;;;yes]
-	
-$onlyIf[$hasRoles[$guildID;$authorID;895308742642507817]==false;{"content":"You're so rich, but there's something else you can't buy. Like this one. 🤠 *Cause you already did so.*","ephemeral": true, "options":{"interaction" : true}}]
+		||Now you can have your own role, __your own color... your own role name and possibly icon...__ Mmmm, also you got Saku's nudez 😳||;;;;;yes]
 
-$onlyIf[$getGlobalUserVar[cube]>=50;{"content": "$nonEscape[Need to collect more $customEmoji[git_package] __G-Packs__ to buy this perk.]","ephemeral": true, "options":{"interaction" : true}}]
+		$onlyIf[$getGlobalUserVar[cube]>=50;{"content": "$nonEscape[Need to collect more $customEmoji[git_package] __G-Packs__ to buy this perk.]","ephemeral": true, "options":{"interaction" : true}}]
 
-$onlyIf[$interactionData[values[0]]==perk4;]
+		$onlyIf[$hasRoles[$guildID;$authorID;895308742642507817]==false;{"content":"You're so rich, but there's something else you can't buy. Like this one. 🤠 *Cause you already did so.*","ephemeral": true, "options":{"interaction" : true}}]
+
+		$onlyIf[$interactionData[values[0]]==perk4;]
 		`
 	}
 ]
