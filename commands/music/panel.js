@@ -68,17 +68,11 @@ module.exports = [
         {color:$getVar[invisibleHex]}
         {footer:・Enjoy! 🙌🏻:$userAvatar[$clientID]}
       };{actionRow:
-        {button:loop:2:loopSong_$authorID:false}
+        {button:loop s:2:loopSong_$authorID:false}
         {button:previous:2:previousTrack_$authorID:false}
         {button:stop:2:stopTrack_$authorID:false}
         {button:next:2:skipTrack_$authorID:false}
-        {button:loop:2:loopQueue_$authorID:false}
-      }{actionRow:
-        {button:song:2:invalid:true}
-        {button:song:2:invalid:true}
-        {button:song:2:invalid:true}
-        {button:song:2:invalid:true}
-        {button:song:2:invalid:true}
+        {button:loop q:2:loopQueue_$authorID:false}
       }{actionRow:
         {selectMenu:musicMenu_$authorID:・Tap here for other music options~:1:1:false:
           {selectMenuOptions:#1 music heals!:music0:play previous track, stop, skip or l∞p? Tap to here!:yes:$nonEscape[$customEmoji[git_previous]]}
@@ -295,12 +289,6 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==previousTrack;]
          {button:bass:2:bass_$authorID:false}
          {button:8d:2:8d_$authorID:false}
       }{actionRow:
-        {button:effect:2:invalid:true}
-        {button:list:2:invalid:true}
-        {button:effects:2:invalid:true}
-        {button:effect:2:invalid:true}
-        {button:effect:2:invalid:true}
-      }{actionRow:
         {selectMenu:musicMenu_$authorID:・Tap here for other music options~:1:1:false:
           {selectMenuOptions:#1 music heals!:music0:play previous track, stop, skip or l∞p? Tap to here!:no:$nonEscape[$customEmoji[git_previous]]}
           {selectMenuOptions:#2 enjoy with track!:music1:nightcore queue reset filters autoplay and 8D audio!:yes:$nonEscape[$customEmoji[git_redo]]}
@@ -327,7 +315,7 @@ $onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==previousTrack;]
 		$onlyIf[$interactionData[customId]==musicMenu_$interactionData[author.id];]
 
 		$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];{
-			"content": "$customEmoji[git_verified] For real, using their music menu? Not cool $username, not cool...",
+			"content": "$nonEscape[$customEmoji[git_verified]] For real, using their music menu? Not cool $username, not cool...",
 			"ephemeral": true,
 			"options": {
 				"interaction" : true
