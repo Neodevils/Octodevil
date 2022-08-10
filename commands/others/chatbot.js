@@ -7,9 +7,9 @@ module.exports = {
 
   $botTyping
 
-  $onlyIf[$checkContains[$message;@everyone;@here]==false;{newEmbed:{description:I don't disturb people!}{color:ccb0b0}}]
+  $onlyIf[$checkContains[$message;@everyone;@here]==false;Understandable have a great day 🗿]
 
-  $onlyForChannels[741841576992702505;{}]
+  $onlyForChannels[741841576992702505;]
 
   $suppressErrors
   `
