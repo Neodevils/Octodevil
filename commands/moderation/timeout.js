@@ -15,6 +15,6 @@ module.exports = {
 
   $let[time;$timeoutMember[$guildID;$slashOption[member];$slashOption[time]$slashOption[unit];yes;$replaceText[$interactionData[options.data[3].value];undefined;No reason given.]]]
 
-  $onlyForRoles[$getVar[staff];{"content":"$nonEscape[$customEmoji[git_alert]] Not allowed to use it. Sad...","ephemeral": "true", "options": {"interaction": true}}]
+  $onlyForRoles[$getVar[owner];$getVar[staff];{"content":"$nonEscape[$customEmoji[git_alert]] Not allowed to use it. Sad...","ephemeral": "true", "options": {"interaction": true}}]
   `
 }

@@ -9,8 +9,9 @@ module.exports = (bot) => {
   
 // Staff Roles Variables
   bot.variables({
-    staff: "801606644001013760;801606706374639666",
-		extras: "836338427578286111"
+    owner: 801606644001013760,
+    staff: 801606706374639666,
+		extras: 836338427578286111
   });
 	
 // Economy Variables
@@ -24,8 +25,8 @@ module.exports = (bot) => {
 
 // Others
   bot.variables({
-    caseNum: "0",
-    keyRole: "805451556081500220",
+    caseNum: 0,
+    keyRole: 805451556081500220,
     randomString: ""
   });
   
