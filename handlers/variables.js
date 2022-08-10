@@ -7,12 +7,9 @@ module.exports = (bot) => {
     invisibleHex: "#303136"
   });
   
-// Staff Role Variables
+// Staff Roles Variables
   bot.variables({
-    owner: "801606644001013760",
-    admin: "922237235779231805",
-    mod: "801606706374639666",
-    support: "825527420580265986",
+    staff: "801606644001013760;801606706374639666",
 		extras: "836338427578286111"
   });
 	
