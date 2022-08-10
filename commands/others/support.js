@@ -4,7 +4,7 @@ module.exports = [
 		type: 'awaited',
 		code: `
 		$apiMessage[$channelID
-		;$nonEscape[$customEmoji[git_issue]] — How can we help to you?
+		;$nonEscape[$customEmoji[git_issue]] — How can we help to you? 🙌🏻
 		;{newEmbed:
 		  {thumbnail:https://media.discordapp.net/attachments/861208192121569280/990687631581016145/Balksz140_20220626213833.png}
 		  {description:> Please select a menu that you're requesting for help.}
@@ -26,7 +26,7 @@ module.exports = [
     code: `
     $if[1==1;{execute:supMsg}; ]
     
-		$channelSendMessage[$get[id];Hello <@&959007276402901032> team, <@$authorID> needs your help :3]
+		$channelSendMessage[$get[id];Hello <@&959007276402901032> team, <@$authorID> needs your help! 👀]
 		
 		$let[id;$createThread[$channelID;⨀ Issue ⌗O$getServerVar[caseNum];60;private;$messageID;yes]]
 
@@ -55,7 +55,7 @@ module.exports = [
 		code: `
 		$if[1==1;{execute:supMsg}; ]
 		
-		$channelSendMessage[$get[id];<@&959007092537192458>, <@$authorID> wants to report something!]
+		$channelSendMessage[$get[id];<@&959007092537192458>, <@$authorID> wants to report something! 🚨]
 		
 		$let[id;$createThread[$channelID;⨀ Issue ⌗O$getServerVar[caseNum];60;private;$messageID;yes]]
 
@@ -84,7 +84,7 @@ module.exports = [
 		code: `
 		$if[1==1;{execute:supMsg}; ]
 		
-		$channelSendMessage[$get[id];<@&962292010310586429>, <@$authorID> wants to discuss about something!]
+		$channelSendMessage[$get[id];<@&962292010310586429>, <@$authorID> wants to discuss about something! 🤠]
 		
 		$let[id;$createThread[$channelID;⨀ Issue ⌗O$getServerVar[caseNum];60;private;$messageID;yes]]
 
