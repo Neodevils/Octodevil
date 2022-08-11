@@ -4,11 +4,10 @@ module.exports = {
   prototype: 'slash',
   code: `
   $interactionreply[;{newEmbed:
-    {author:Shhhh!:$authorAvatar}
+    {author:$randomText[Stop right there!; Shhhh!;Oof!; Well, you deserved.;Oops!]:$authorAvatar}
     {thumbnail:$userAvatar[$slashOption[member]]}
-    {description:$customEmoji[git_timeout] $username timeouted $userTag[$slashOption[member]].
-> Let's keep the channels clean! 🙌🏻
-    }
+    {description:$customEmoji[git_timeout] **$username** timeouted **__$userTag[$slashOption[member]]__**.
+> Let's keep the channels clean! 🙌🏻}
     {field: — Time:$customEmoji[git_clock] <t:$truncate[$divide[$get[time];1000]]:R>}
     {field:﹠reason:$customEmoji[git_write] $replaceText[$interactionData[options.data[3].value];undefined;No reason given.]}{color:$getVar[invisibleHex]}
   }]
