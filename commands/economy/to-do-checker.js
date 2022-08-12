@@ -1,20 +1,39 @@
 module.exports = [
+  // message counter
   {
-    name: "$alwaysExecute",
-    code: `
-    $if[$mentioned[1;no]==;$setUserVar[mentionTaskCount;$sum[$getUserVar[mentionTaskCount;$mentioned[1;no]];1]]]
-    
-    $cooldown[12h;]
-    
-    $onlyIf[$getUserVar[mentionTaskCount]<5;]
-    
-    $onlyIf[$mentioned!=$authorID;Did you just ping yourself to complete the task?]
-    `
-  }, {
     name: "$alwaysExecute",
     $if: 'v4',
     code: `
-    $setUserVar[messageTask;$sum[$getUserVar[messageTask];1]]
+    $if[$getUserVar[messageCount]>=100]
+    $setUserVar[taskDone;$sum[$getUserVar[taskDone];1]]
+    
+    $setUserVar[ruby;$sum[$getUserVar[ruby];600]]
+    $endif
+    
+    $setUserVar[messageCount;$sum[$getUserVar[messageCount];1]]
+    `
+  },
+  
+  // key holder counter
+  {
+    name: "$alwaysExecute",
+    code: `
+    $setUserVar[taskDone;$sum[$getUserVar[taskDone];1]]
+    
+    $setUserVar[ruby;$sum[$getUserVar[ruby];400]]
+    
+    $onlyIf[$getUserVar[keyHolderCount]<2;]
+    `
+  },
+  // salute counter
+  {
+    name: "$alwaysExecute",
+    code: `
+    $setUserVar[taskDone;$sum[$getUserVar[taskDone];1]]
+    
+    $setUserVar[ruby;$sum[$getUserVar[ruby];500]]
+    
+    $onlyIf[$getGlobalUserVar[saluteTask]==true;]
     `
   }
 ]
