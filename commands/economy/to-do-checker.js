@@ -13,7 +13,6 @@ module.exports = [
     $setUserVar[messageCount;$sum[$getUserVar[messageCount];1]]
     `
   },
-  
   // key holder counter
   {
     name: "$alwaysExecute",
