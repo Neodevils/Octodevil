@@ -23,7 +23,7 @@ module.exports = (bot) => {
     dailyMultiplier: 1,
     taskDone: 0,
     messageCount: 0,
-    mentionCount: 0,
+    keyHolderCount: 0,
     starCount: 0,
     saluteTask: "false"
   });

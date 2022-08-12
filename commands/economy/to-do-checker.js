@@ -5,7 +5,8 @@ module.exports = [
     $if: 'v4',
     code: `
     $if[$getUserVar[messageCount]>=100]
-    $setUserVar[taskDone;$sum[$getUserVar[taskDone];1]]
+    Completed the task!
+$setUserVar[taskDone;$sum[$getUserVar[taskDone];1]]
     
     $setUserVar[ruby;$sum[$getUserVar[ruby];600]]
     $endif
@@ -16,11 +17,16 @@ module.exports = [
   // key holder counter
   {
     name: "$alwaysExecute",
+		$if: 'v4',
     code: `
-    $setUserVar[taskDone;$sum[$getUserVar[taskDone];1]]
+
+    $if[$getUserVar[keyHolderCount]>=2]
+		Completed the task!
+	$setUserVar[taskDone;$sum[$getUserVar[taskDone];1]]
     
     $setUserVar[ruby;$sum[$getUserVar[ruby];400]]
-    
+    $endif
+		
     $onlyIf[$getUserVar[keyHolderCount]<2;]
     `
   },
@@ -28,6 +34,7 @@ module.exports = [
   {
     name: "$alwaysExecute",
     code: `
+		Completed the task!
     $setUserVar[taskDone;$sum[$getUserVar[taskDone];1]]
     
     $setUserVar[ruby;$sum[$getUserVar[ruby];500]]
