@@ -22,8 +22,9 @@ module.exports = (bot) => {
     cube: 0,
     dailyMultiplier: 1,
     taskDone: 0,
-    messageTaskCount: 0,
+    messageCount: 0,
     mentionCount: 0,
+    starCount: 0,
     saluteTask: "false"
   });
 
