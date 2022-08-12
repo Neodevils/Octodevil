@@ -11,7 +11,7 @@ module.exports = (bot) => {
   bot.variables({
     owner: "801606644001013760",
     staff: "801606706374639666",
-		extras: "836338427578286111"
+    extras: "836338427578286111"
   });
 	
 // Economy Variables
@@ -20,7 +20,11 @@ module.exports = (bot) => {
     profileDescription: "",
     ruby: 0,
     cube: 0,
-    dailyMultiplier: 1
+    dailyMultiplier: 1,
+    taskDone: 0,
+    messageTask: 0,
+    mentionTask: 0,
+    saluteTask: 0
   });
 
 // Others
