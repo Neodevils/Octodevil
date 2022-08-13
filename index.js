@@ -67,14 +67,14 @@ bot.functionManager.createCustomFunction({
 
 
 bot.command({
-    name: "c-dev",
-    code: `
-	$createApplicationCommand[$guildID;dev; Developers only.;true;slash;{string:do:Pick a type 🐢:yes:{choice:ɑ • d.js:djsEval}{choice:β • aoi.js:aoijsEval}{choice:η • Update Commands:updCmds}}{string:code:Cool codes written down here 🚀:no}]
+  name: "c-dev",
+  code: `
+  $createApplicationCommand[$guildID;dev;— This command is only for Neo.;true;slash;{string:do:Please pick a type.:yes:{choice:• d.js evaluation:djsEval}{choice:• aoi.js evaluation:aoijsEval}{choice:• Updating Commands:updCmds}}{string:code:Awesome codes written in here! ✌🏻:no}]
 	
-	Successfully created it. \`🤠\`
+  Successfully created it. 🤠
 	
-	$onlyForIDs[$botOwnerID;]
-	`
+  $onlyForIDs[$botOwnerID;]
+  `
 });
 
 keepAlive()
