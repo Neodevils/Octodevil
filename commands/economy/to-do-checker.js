@@ -5,6 +5,7 @@ module.exports = [
     $if: 'v4',
     code: `
     $if[$getUserVar[messageCount]==100]
+    $setUserVar[taskDone;$sub[$getUserVar[taskDone];1]]
     $cooldown[6h;]
 
     You have completed "Send 100 messages in $serverName" task! The cooldown will reset in 6 hours.
@@ -23,6 +24,8 @@ module.exports = [
     code: `
 		$cooldown[6h;]
 
+    $setUserVar[taskDone;$sub[$getUserVar[taskDone];1]]
+    
     You have completed "salute a member" task! The cooldown will reset in 6 hours.
 
     $setUserVar[taskDone;$sum[$getUserVar[taskDone];1]]
