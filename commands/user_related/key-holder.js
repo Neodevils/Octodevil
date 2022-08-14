@@ -5,12 +5,16 @@ module.exports = {
 	$if: 'v4',
   code: `
   $if[$getUserVar[keyHolderCount]==1]
-		Completed the task!
+	$cooldown[6h;]
+
+  You have completed "Claim key holder 2 times" task! The cooldown will reset in 6 hours.
+  
 	$setUserVar[taskDone;$sum[$getUserVar[taskDone];1]]
     
-    $setUserVar[ruby;$sum[$getUserVar[ruby];400]]
-    $endif
-		$interactionReply[<@&$getVar[keyRole]> claimed.;{newEmbed:{description:$customEmoji[git_key] Great! Now you will be earning __rubies__ while holding the key!}{color:$getVar[invisibleHex]}}]
+  $setUserVar[ruby;$sum[$getUserVar[ruby];400]]
+  $endif
+
+	$interactionReply[<@&$getVar[keyRole]> claimed.;{newEmbed:{description:$customEmoji[git_key] Great! Now you will be earning __rubies__ while holding the key!}{color:$getVar[invisibleHex]}}]
  
  $setUserVar[keyHolderCount;$sum[$getUserVar[keyHolderCount];1]]
   
