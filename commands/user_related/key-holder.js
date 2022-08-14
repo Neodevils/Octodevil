@@ -6,7 +6,7 @@ module.exports = {
   code: `
   $if[$getUserVar[keyHolderCount]==1]
 	$cooldown[6h;]
-  
+  $setUserVar[keyHolderCount;0]
   $setUserVar[taskDone;$sub[$getUserVar[taskDone];1]]
 
   You have completed "Claim key holder 2 times" task! The cooldown will reset in 6 hours.
