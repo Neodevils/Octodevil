@@ -4,7 +4,8 @@ module.exports = [
     name: "$alwaysExecute",
     $if: 'v4',
     code: `
-    $if[$getUserVar[messageCount]==100]
+    $if[$getUserVar[messageCount]>=100]
+    $setUserVar[messageCount;0]
     $setUserVar[taskDone;$sub[$getUserVar[taskDone];1]]
     $cooldown[6h;]
 
@@ -23,9 +24,9 @@ module.exports = [
     name: "$alwaysExecute",
     code: `
 		$cooldown[6h;]
-
+    $setUserVar[saluteTask;false]
     $setUserVar[taskDone;$sub[$getUserVar[taskDone];1]]
-    
+
     You have completed "salute a member" task! The cooldown will reset in 6 hours.
 
     $setUserVar[taskDone;$sum[$getUserVar[taskDone];1]]
