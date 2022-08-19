@@ -1,5 +1,5 @@
 module.exports = {
-  name: "solve",
+  name: "close-issue",
   type: 'interaction',
   prototype: 'slash',
   code: `
