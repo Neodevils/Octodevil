@@ -18,7 +18,7 @@
 		"npm": "^8.13.1"
 	},
 	"dependencies": {
-		"@akarui/aoi.music": "^1.2.5",
+		"@akarui/aoi.music": "https://github.com/akaruidevelopment/music#dev",
 		"@discordjs/opus": "^0.5.3",
 		"aoi.js": "github:usersatoshi/aoi.js#v5",
 		"aoi.mongo": "^0.2.0",
