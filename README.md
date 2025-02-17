@@ -1,3 +1,3 @@
 # Octodevil 
 
-Hello 👋
+This repository is no longer supported. Please use Kaeru instead.
