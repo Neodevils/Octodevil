@@ -15,7 +15,7 @@
 	"description": "Minesa's Client",
 	"devDependencies": {
 		"node": "^17.9.1",
-		"npm": "^8.13.1"
+		"npm": "^11.1.0"
 	},
 	"dependencies": {
 		"@akarui/aoi.music": "https://github.com/akaruidevelopment/music#dev",
